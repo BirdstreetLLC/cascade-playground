@@ -1,0 +1,68 @@
+import { definePreset } from '@primeng/themes';
+import Aura from '@primeng/themes/aura';
+
+const cascadeFigmaVariables = {
+  goldLight: '#ffdd6d',
+  red: '#fd0052',
+  goldDarker: '#997f2c',
+  tealDarkest: '#005254',
+  goldDark: '#ccaa3a',
+  blueLightest10: '#e9edfe',
+  purpleDark: '#795cbe',
+  purpleDarkest: '#3c2e5f',
+  gold: '#ffd449',
+  redDarkest: '#650021',
+  redDark: '#ca0042',
+  blueLighter: '#7f94fa',
+  redLightest: '#fe99ba',
+  redLight: '#fd3375',
+  blueLightest: '#a9b7fb',
+  redLighter: '#fe6697',
+  teal: '#00cdd1',
+  purpleDarker: '#5b458f',
+  blueLight: '#5470f8',
+  tealDarker: '#007b7d',
+  purpleLighter: '#c1abf5',
+  white: '#ffffff',
+  greyLightest: '#f9f9f9',
+  blueDarker: '#192e94',
+  grey: '#98a8bc',
+  blueDark: '#213dc5',
+  greyLighter: '#efefef',
+  purpleLight: '#ac8ff1',
+  goldLighter: '#ffe592',
+  tealDark: '#00a4a7',
+  greyDark: '#5b6b7f',
+  tealLightest: '#99ebed',
+  goldLightest: '#ffeeb6',
+  purple: '#9773ee',
+  purpleLightest: '#d5c7f8',
+  greyDarkest: '#001738',
+  tealLighter: '#66e1e3',
+  blueDarkest: '#101e62',
+  tealLight: '#33d7da',
+  redDarker: '#980031',
+  greyLight: '#dee1e5',
+  blue: '#294cf6',
+  goldDarkest: '#66551d',
+};
+
+const Cascade = definePreset(Aura, {
+  semantic: {
+    primary: {
+      50: cascadeFigmaVariables.blueLightest10,
+      100: cascadeFigmaVariables.blueLightest10,
+      200: cascadeFigmaVariables.blueLightest,
+      300: cascadeFigmaVariables.blueLighter,
+      400: cascadeFigmaVariables.blueLight,
+      500: cascadeFigmaVariables.blue,
+      600: cascadeFigmaVariables.blueDark,
+      700: cascadeFigmaVariables.blueDarker,
+      800: cascadeFigmaVariables.blueDarker,
+      900: cascadeFigmaVariables.blueDarker,
+      950: cascadeFigmaVariables.blueDarkest,
+    },
+  },
+});
+
+export { Cascade };
