@@ -48,6 +48,45 @@ const cascadeFigmaVariables = {
 };
 
 const Cascade = definePreset(Aura, {
+  grey: {
+    50: cascadeFigmaVariables.greyLightest,
+    100: cascadeFigmaVariables.greyLighter,
+    200: cascadeFigmaVariables.greyLight,
+    300: cascadeFigmaVariables.grey,
+    400: cascadeFigmaVariables.greyDark,
+    500: cascadeFigmaVariables.greyDarkest,
+    600: cascadeFigmaVariables.greyDarkest,
+    700: cascadeFigmaVariables.greyDarkest,
+    800: cascadeFigmaVariables.greyDarkest,
+    900: cascadeFigmaVariables.greyDarkest,
+    950: cascadeFigmaVariables.greyDarkest,
+  },
+  purple: {
+    50: cascadeFigmaVariables.purpleLightest,
+    100: cascadeFigmaVariables.purpleLighter,
+    200: cascadeFigmaVariables.purpleLight,
+    300: cascadeFigmaVariables.purple,
+    400: cascadeFigmaVariables.purpleDark,
+    500: cascadeFigmaVariables.purpleDarker,
+    600: cascadeFigmaVariables.purpleDarker,
+    700: cascadeFigmaVariables.purpleDarkest,
+    800: cascadeFigmaVariables.purpleDarkest,
+    900: cascadeFigmaVariables.purpleDarkest,
+    950: cascadeFigmaVariables.purpleDarkest,
+  },
+  blue: {
+    50: cascadeFigmaVariables.blueLightest10,
+    100: cascadeFigmaVariables.blueLightest10,
+    200: cascadeFigmaVariables.blueLightest,
+    300: cascadeFigmaVariables.blueLighter,
+    400: cascadeFigmaVariables.blueLight,
+    500: cascadeFigmaVariables.blue,
+    600: cascadeFigmaVariables.blueDark,
+    700: cascadeFigmaVariables.blueDarker,
+    800: cascadeFigmaVariables.blueDarker,
+    900: cascadeFigmaVariables.blueDarker,
+    950: cascadeFigmaVariables.blueDarkest,
+  },
   semantic: {
     primary: {
       50: cascadeFigmaVariables.blueLightest10,
