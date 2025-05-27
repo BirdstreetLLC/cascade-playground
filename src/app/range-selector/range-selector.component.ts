@@ -19,6 +19,10 @@ export class RangeSelectorComponent {
 
   selectedConditional: Conditional | undefined;
 
+  onChange(event: any) {
+    console.log(event);
+  }
+
   ngOnInit() {
     this.conditionals = [
       { name: 'Between', code: 'Between' },
@@ -28,4 +32,6 @@ export class RangeSelectorComponent {
       { name: 'Does Not Equal', code: 'Does Not Equal' },
     ];
   }
+
+ 
 }
