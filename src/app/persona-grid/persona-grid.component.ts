@@ -1,4 +1,4 @@
-import { NgFor, NgIf, NgStyle } from '@angular/common';
+import { NgFor, NgIf} from '@angular/common';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { cascadeFigmaVariables } from '../cascade';
@@ -14,11 +14,13 @@ enum Condition {
 
 @Component({
   selector: 'app-persona-grid',
-  imports: [NgFor, NgIf, CommonModule, TooltipModule, NgStyle],
+  imports: [NgFor, NgIf, CommonModule, TooltipModule],
   templateUrl: './persona-grid.component.html',
   styleUrl: './persona-grid.component.css',
 })
 export class PersonaGridComponent {
+
+  colors = cascadeFigmaVariables;
   createSquare(title: string, condition: string) {
     const randomNumber = Math.floor(Math.random() * 9) + 10;
     const randomDecimal = Math.random();
@@ -29,23 +31,23 @@ export class PersonaGridComponent {
   }
 
   heatColorMap = [
-    { threshold: 80, color: cascadeFigmaVariables.redDarker },
-    { threshold: 75, color: cascadeFigmaVariables.redDark },
-    { threshold: 70, color: cascadeFigmaVariables.red },
-    { threshold: 65, color: cascadeFigmaVariables.red },
-    { threshold: 60, color: cascadeFigmaVariables.redLight },
-    { threshold: 55, color: cascadeFigmaVariables.redLighter },
-    { threshold: 50, color: cascadeFigmaVariables.redLightest },
-    { threshold: 45, color: cascadeFigmaVariables.tealDarkest },
-    { threshold: 40, color: cascadeFigmaVariables.tealDarker },
-    { threshold: 35, color: cascadeFigmaVariables.tealDark },
-    { threshold: 30, color: cascadeFigmaVariables.teal },
-    { threshold: 25, color: cascadeFigmaVariables.tealLight },
-    { threshold: 20, color: cascadeFigmaVariables.tealLighter },
-    { threshold: 15, color: cascadeFigmaVariables.tealLightest },
+    { threshold: 80, color: this.colors.redDarker },
+    { threshold: 75, color: this.colors.redDark },
+    { threshold: 70, color: this.colors.red },
+    { threshold: 65, color: this.colors.red },
+    { threshold: 60, color: this.colors.redLight },
+    { threshold: 55, color: this.colors.redLighter },
+    { threshold: 50, color: this.colors.redLightest },
+    { threshold: 45, color: this.colors.tealDarkest },
+    { threshold: 40, color: this.colors.tealDarker },
+    { threshold: 35, color: this.colors.tealDark },
+    { threshold: 30, color: this.colors.teal },
+    { threshold: 25, color: this.colors.tealLight },
+    { threshold: 20, color: this.colors.tealLighter },
+    { threshold: 15, color: this.colors.tealLightest },
   ];
 
-  cascadeFigmaVariables = cascadeFigmaVariables;
+
 
   generateHeatColor = (total: number): string => {
     for (const { threshold, color } of this.heatColorMap) {

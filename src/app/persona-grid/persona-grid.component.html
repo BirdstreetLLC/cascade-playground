@@ -4,23 +4,23 @@
     </div>
     <div class="flex flex-col transition items-center min-h-[100px] justify-center gap-1 rounded p-2 border border-gray-100">
         <span>High Admit</span>
-        <span [style.color]="cascadeFigmaVariables.greyDark" class="text-[14px]">Acute</span>
+        <span [style.color]="colors.greyDark" class="text-[14px]">Acute</span>
     </div>
     <div class="flex flex-col transition items-center min-h-[100px] justify-center gap-1 rounded p-2 border border-gray-100">
         <span>CHF</span>
-        <span [style.color]="cascadeFigmaVariables.greyDark" class="text-[14px]">Acute</span>
+        <span [style.color]="colors.greyDark" class="text-[14px]">Acute</span>
     </div>
     <div class="flex flex-col transition items-center min-h-[100px] justify-center gap-1 rounded p-2 border border-gray-100">
         <span>Diabetes Comp</span>
-        <span [style.color]="cascadeFigmaVariables.greyDark" class="text-[14px]">Chronic</span>
+        <span [style.color]="colors.greyDark" class="text-[14px]">Chronic</span>
     </div>
     <div class="flex flex-col transition items-center min-h-[100px] justify-center gap-1 rounded p-2 border border-gray-100">
         <span>Depression</span>
-        <span [style.color]="cascadeFigmaVariables.greyDark" class="text-[14px]">Behavioral</span>
+        <span [style.color]="colors.greyDark" class="text-[14px]">Behavioral</span>
     </div>
     <div class="flex flex-col transition items-center min-h-[100px] justify-center gap-1 rounded p-2 border border-gray-100">
         <span>Prev Gaps</span>
-        <span [style.color]="cascadeFigmaVariables.greyDark" class="text-[14px]">Preventative</span>
+        <span [style.color]="colors.greyDark" class="text-[14px]">Preventative</span>
     </div>
   <ng-container *ngFor="let group of [urbanYoungAdults, ruralSeniors, workingFamilies, lowIncomeUrban]">
     <button [pTooltip]="tooltipContent" tooltipPosition="top" *ngFor="let persona of group; let i = index" 
