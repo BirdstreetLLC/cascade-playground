@@ -48,7 +48,7 @@ const cascadeFigmaVariables = {
 };
 
 const Cascade = definePreset(Aura, {
-  grey: {
+  gray: {
     50: cascadeFigmaVariables.greyLightest,
     100: cascadeFigmaVariables.greyLighter,
     200: cascadeFigmaVariables.greyLight,

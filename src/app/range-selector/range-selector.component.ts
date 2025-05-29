@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { SelectModule } from 'primeng/select';
 import { InputTextModule } from 'primeng/inputtext';
+import { cascadeFigmaVariables } from '../cascade';
 
 interface Conditional {
   name: string;
@@ -19,6 +20,8 @@ export class RangeSelectorComponent {
 
   selectedConditional: Conditional | undefined;
 
+  colors = cascadeFigmaVariables;
+
   onChange(event: any) {
     console.log(event);
   }
@@ -32,6 +35,4 @@ export class RangeSelectorComponent {
       { name: 'Does Not Equal', code: 'Does Not Equal' },
     ];
   }
-
- 
 }
