@@ -257,14 +257,15 @@ const Cascade = definePreset(Aura, {
       fontSize: cascadeFigmaVariables.cascadeBrand.fontSizeRegular.toString() + "px",
       sm: {
         fontSize:  cascadeFigmaVariables.cascadeBrand.fontSizeRegular.toString() +"px",
-        paddingX: '8px',
-        paddingY: '4px',
+        paddingX: cascadeFigmaVariables.cascadeBrand.spacingSmall.toString() + 'px',
+        paddingY: cascadeFigmaVariables.cascadeBrand.spacingSmall.toString() + 'px',
       },
       lg: {
         fontSize: cascadeFigmaVariables.cascadeBrand.fontSizeLarge.toString() + "px",
         paddingX: cascadeFigmaVariables.cascadeMapped.tabPaddingX.toString() + "px",
         paddingY: cascadeFigmaVariables.cascadeMapped.tabPaddingY.toString() + "px"
       },
+      borderRadius: cascadeFigmaVariables.cascadeBrand.radiusSmall.toString() + "px"
     },
     primary: {
       50: cascadeFigmaVariables.cascadeBrand.blueLightest10,
