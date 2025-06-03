@@ -1,7 +1,7 @@
 import { NgFor, NgIf} from '@angular/common';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { cascadeFigmaVariables } from '../cascade';
+import { cascadeFigmaVariables } from '../../cascade';
 import { TooltipModule } from 'primeng/tooltip';
 
 enum Condition {

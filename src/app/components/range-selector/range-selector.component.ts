@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { SelectModule } from 'primeng/select';
 import { InputTextModule } from 'primeng/inputtext';
-import { cascadeFigmaVariables } from '../cascade';
+import { cascadeFigmaVariables } from '../../cascade';
 
 interface Conditional {
   name: string;
