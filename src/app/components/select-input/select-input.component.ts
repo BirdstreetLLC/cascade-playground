@@ -11,9 +11,8 @@ interface Conditional {
   selector: 'app-select-input',
   imports: [SelectModule],
   templateUrl: './select-input.component.html',
-  styleUrl: './select-input.component.css'
+  styleUrl: './select-input.component.css',
 })
-
 export class SelectInputComponent {
   colors = cascadeFigmaVariables;
   conditionals: Conditional[] | undefined;
