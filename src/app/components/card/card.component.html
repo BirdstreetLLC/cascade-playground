@@ -1,0 +1,53 @@
+<div class="flex flex-col rounded border border-gray-200 bg-white py-4">
+    <div class="flex justify-center items-center px-4">
+        <app-pill [label]="status" />
+        <div class="flex-1"></div>
+        <mat-icon>more_vert</mat-icon>
+    </div>
+
+    <div class="flex flex-col justify-start w-full items-start px-4">
+        <h2 [style]="{ color: cascade.cascadeBrand.greyDarkest, fontSize: '18px' }">{{title}}</h2>
+        <div class="flex flex-row justify-center items-center gap-1"><span class="text-gray-400">Start Date: </span> {{startDate}} <mat-icon [style]="{ color: cascade.cascadeBrand.greyDark, fontSize: '14px' }" class="mt-2 ml-2">arrow_forward</mat-icon>  {{endDate}}</div>
+    </div>
+
+    <div class="flex justify-start w-full items-center px-4 py-2 my-2" [style]="{ backgroundColor: cascade.cascadeAlias.tertiary }">
+        <div>
+            <img src="https://res.cloudinary.com/dbrkk86kt/image/upload/v1756230956/mpulse/program-manager-prototype/person_celebrate_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24_1_ug0rfe.png" width="24" height="24" />
+        </div>
+        <div class="flex flex-col ml-2">
+            <span [style]="{ color: 'white', fontSize: '16px' }">{{engagementRate}}% {{engagementRateTitle}} </span>
+            <span [style]="{ color: 'white', fontSize: '12px' }">{{engagementRateSubtitle}}</span>
+        </div>
+    </div>
+
+    <div class="flex justify-center items-center w-full items-start px-4 pt-2">
+        <div class="flex flex-col justify-center items-center">
+            <span class="font-bold">{{memberList | number}}</span>
+            <span class="text-gray-400">Member list</span>
+        </div>
+        <div class="flex-1"></div>
+        <div class="flex flex-col justify-center items-center">
+            <span class="font-bold">{{engaged}}</span>
+            <span class="text-gray-400">Engaged</span>
+        </div>
+         <div class="flex-1"></div>
+        <div class="flex flex-col justify-center items-center">
+            <span class="font-bold">{{unableToReach}}</span>
+            <span class="text-gray-400">Unable to Reach</span>
+        </div>
+         <div class="flex-1"></div>
+        <div class="flex flex-col justify-center items-center">
+            <span class="font-bold">{{optedOut}}</span>
+            <span class="text-gray-400">Opted Out</span>
+        </div>
+    </div>
+
+    <div class="flex justify-end items-center w-full items-start px-4 mt-4 pt-4 border-t border-gray-200">
+        <div>
+            <p-button styleClass="p-button-outlined p-button-secondary">
+                <span>View Results</span>
+            </p-button>
+        </div>
+    </div>
+
+</div>

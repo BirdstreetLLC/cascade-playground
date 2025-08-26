@@ -8,9 +8,8 @@ describe('AskDpiComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AskDpiComponent]
-    })
-    .compileComponents();
+      imports: [AskDpiComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(AskDpiComponent);
     component = fixture.componentInstance;

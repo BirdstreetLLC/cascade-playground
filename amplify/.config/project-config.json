@@ -12,7 +12,5 @@
       "StartCommand": "ng serve"
     }
   },
-  "providers": [
-    "awscloudformation"
-  ]
+  "providers": ["awscloudformation"]
 }

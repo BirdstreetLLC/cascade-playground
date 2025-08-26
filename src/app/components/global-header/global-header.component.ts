@@ -5,8 +5,8 @@ import { cascadeFigmaVariables } from '../../cascade';
   imports: [],
   standalone: true,
   templateUrl: './global-header.component.html',
-  styleUrl: './global-header.component.css'
+  styleUrl: './global-header.component.css',
 })
 export class GlobalHeaderComponent {
-  colors = cascadeFigmaVariables
+  colors = cascadeFigmaVariables;
 }

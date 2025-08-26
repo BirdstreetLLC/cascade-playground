@@ -2,3 +2,6 @@
 @import "tailwindcss";
 html, body { height: 100%; background-color: #ffffff; }
 body { margin: 0; font-family: Inter, "Helvetica Neue", sans-serif; font-size: "14px";}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

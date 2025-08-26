@@ -4,8 +4,6 @@ import { SelectInputComponent } from '../../components/select-input/select-input
   selector: 'app-ask-dpi',
   imports: [SelectInputComponent],
   templateUrl: './ask-dpi.component.html',
-  styleUrl: './ask-dpi.component.css'
+  styleUrl: './ask-dpi.component.css',
 })
-export class AskDpiComponent {
-
-}
+export class AskDpiComponent {}

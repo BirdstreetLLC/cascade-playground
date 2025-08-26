@@ -11,5 +11,5 @@ export const routes: Routes = [
   { path: 'select-input', component: SelectInputComponent },
   { path: 'ask-dpi', component: AskDpiComponent },
   { path: 'program-manager', component: ProgramManagerComponent },
-  { path: '', redirectTo: '/range-selector', pathMatch: 'full' },
+  // { path: '', redirectTo: '/range-selector', pathMatch: 'full' },
 ];

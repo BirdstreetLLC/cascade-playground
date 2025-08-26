@@ -8,9 +8,8 @@ describe('ProgramManagerComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ProgramManagerComponent]
-    })
-    .compileComponents();
+      imports: [ProgramManagerComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ProgramManagerComponent);
     component = fixture.componentInstance;
