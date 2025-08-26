@@ -1,0 +1,15 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cascadeplaygrounddev-dev-00459-authRole",
+      "UnauthRoleArn": "arn:aws:iam::851725363127:role/amplify-cascadeplaygrounddev-dev-00459-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::851725363127:role/amplify-cascadeplaygrounddev-dev-00459-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-cascadeplaygrounddev-dev-00459-deployment",
+      "UnauthRoleName": "amplify-cascadeplaygrounddev-dev-00459-unauthRole",
+      "StackName": "amplify-cascadeplaygrounddev-dev-00459",
+      "StackId": "arn:aws:cloudformation:us-east-1:851725363127:stack/amplify-cascadeplaygrounddev-dev-00459/048a2840-81cc-11f0-829c-12c9a95081c9",
+      "AmplifyAppId": "d257rrp8e2hiqy"
+    }
+  }
+}

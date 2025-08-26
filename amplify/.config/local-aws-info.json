@@ -1,0 +1,7 @@
+{
+  "dev": {
+    "configLevel": "project",
+    "useProfile": false,
+    "awsConfigFilePath": "/Users/caseyhald/.amplify/awscloudformation/6ZFNHElrQI"
+  }
+}
