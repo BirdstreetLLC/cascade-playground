@@ -19,15 +19,27 @@ export class PillComponent {
   cascade = cascadeFigmaVariables;
   pillStyleEnum = PillStyles;
   get backgroundColor(): string {
-  switch (this.pillStyle) {
-    case PillStyles.Primary:
-      return this.cascade.cascadeAlias.primary;
-    case PillStyles.Tertiary:
-      return this.cascade.cascadeAlias.tertiary;
-    case PillStyles.Standard:
-      return this.cascade.cascadeAlias.neutral;
-    default:
-      return this.cascade.cascadeAlias.tertiary; // or some default color
+    switch (this.pillStyle) {
+      case PillStyles.Primary:
+        return this.cascade.cascadeAlias.primary;
+      case PillStyles.Tertiary:
+        return this.cascade.cascadeAlias.tertiary;
+      case PillStyles.Standard:
+        return this.cascade.cascadeBrand.greyLighter;
+      default:
+        return this.cascade.cascadeAlias.tertiary;
+    }
   }
-}
+  get textColor(): string {
+    switch (this.pillStyle) {
+      case PillStyles.Primary:
+        return this.cascade.cascadeBrand.white;
+      case PillStyles.Tertiary:
+        return this.cascade.cascadeBrand.white;
+      case PillStyles.Standard:
+        return this.cascade.cascadeBrand.greyDark;
+      default:
+        return this.cascade.cascadeBrand.white;
+    }
+  }
 }

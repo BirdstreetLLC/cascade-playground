@@ -1,10 +1,10 @@
 <div class="p-8 bg-white flex justify-start items-start">
-    <div class="flex flex-col gap-2">
+    <div class="flex flex-col gap-1">
         <h1 [style]="{ color: cascade.cascadeBrand.greyDarkest, fontSize: cascade.cascadeBrand.fontSizeLarger + 'px' }" *ngIf="title">{{title}}</h1>
         <p [style]="{ color: cascade.cascadeBrand.greyDark }" class="text-[18px]" *ngIf="subtitle">{{subtitle}}</p>
         <div class="flex flex-row gap-4">
-            <span [style]="{ color: cascade.cascadeAlias.primary }" class="cursor-pointer">Program Manager</span>
-            <span [style]="{ color: cascade.cascadeAlias.primary }" class="cursor-pointer" class="text-primary">DPI Data Overview</span>
+            <div [style]="{ color: cascade.cascadeAlias.primary }" class="cursor-pointer flex items-center gap-1 justify-center"><span>Program Manager</span> <mat-icon [style]="{ fontSize: '16px' }" class="mt-2">east</mat-icon></div>
+            <div [style]="{ color: cascade.cascadeAlias.primary }" class="cursor-pointer flex items-center gap-1 justify-center text-primary"><span>DPI Data Overview</span> <mat-icon class="mt-2" [style]="{ fontSize: '16px' }">east</mat-icon></div>
         </div>
     </div>
 
@@ -22,7 +22,7 @@
    
     <div class="flex-1"></div>
 
-    <div *ngIf="dataAsOf" class="flex flex-col gap-2">
+    <div *ngIf="dataAsOf" class="flex flex-col gap-2 justify-end items-end">
         <app-basic-label label="Date As Of" [value]="dataAsOf"/>
         <app-pill [pillStyle]="pillStyleEnum.Standard" [label]="startDate + ' - ' + endDate" />
     </div>

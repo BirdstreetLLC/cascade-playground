@@ -1,11 +1,11 @@
 <div class="flex flex-col rounded border border-gray-200 bg-white py-4">
     <div class="flex justify-center items-center px-4">
-        <app-pill [label]="status" />
+        <app-pill [label]="status" [pillStyle]="pillStyleEnum.Tertiary" />
         <div class="flex-1"></div>
         <mat-icon>more_vert</mat-icon>
     </div>
 
-    <div class="flex flex-col justify-start w-full items-start px-4">
+    <div class="flex flex-col mt-1 justify-start w-full items-start px-4">
         <h2 [style]="{ color: cascade.cascadeBrand.greyDarkest, fontSize: '18px' }">{{title}}</h2>
         <div class="flex flex-row justify-center items-center gap-1"><span class="text-gray-400">Start Date: </span> {{startDate}} <mat-icon [style]="{ color: cascade.cascadeBrand.greyDark, fontSize: '14px' }" class="mt-2 ml-2">arrow_forward</mat-icon>  {{endDate}}</div>
     </div>

@@ -4,11 +4,12 @@ import { cascadeFigmaVariables } from '../../../cascade';
 import { Button } from 'primeng/button';
 import { BasicLabelComponent } from '../../basic-label/basic-label.component';
 import { PillComponent, PillStyles } from '../../pill/pill.component';
+import { MatIcon } from '@angular/material/icon';
 
 
 @Component({
   selector: 'app-header',
-  imports: [NgIf, Button, BasicLabelComponent, PillComponent],
+  imports: [NgIf, Button, BasicLabelComponent, PillComponent, MatIcon],
   templateUrl: './header.component.html',
   standalone: true,
   styleUrl: './header.component.css',
