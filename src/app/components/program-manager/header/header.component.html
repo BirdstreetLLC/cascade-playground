@@ -1,12 +1,21 @@
-<div class="p-8 bg-white flex justify-start items-center">
+<div class="p-8 bg-white flex justify-start items-start">
     <div class="flex flex-col">
         <h1 [style]="{ color: cascade.cascadeBrand.greyDarkest, fontSize: cascade.cascadeBrand.fontSizeLarger + 'px' }" *ngIf="title">{{title}}</h1>
-        <p [style]="{ color: cascade.cascadeBrand.greyDark, fontSize: `18px` }" *ngIf="subtitle">{{subtitle}}</p>
+        <p [style]="{ color: cascade.cascadeBrand.greyDark }" class="text-[18px]" *ngIf="subtitle">{{subtitle}}</p>
     </div>
-    <div *ngIf="channel" className="flex flex-row">
-        <div>Channel:</div> 
-        <span [style]="{ color: cascade.cascadeBrand.greyDarkest }" >{{channel}}</span>
+
+    <div class="flex-1"></div>
+
+    <div *ngIf="channel">
+        <app-basic-label label="Channel" [value]="channel"/>
     </div>
+
+    <div class="flex-1"></div>
+
+    <div *ngIf="trackedOutcome">
+        <app-basic-label label="Tracked Outcome" [value]="trackedOutcome" [isClickable]="true"/>
+    </div>
+   
     <div class="flex-1"></div>
     <div *ngIf="definitions">
         <p-button styleClass="p-button-outlined p-button-secondary">

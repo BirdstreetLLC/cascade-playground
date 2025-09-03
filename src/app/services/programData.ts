@@ -9,13 +9,15 @@ enum Status {
 enum Channel {
     Online = 'Online',
     InPerson = 'In Person',
-    LiveCall = 'Live Call'
+    LiveCall = 'Live Call',
+    SMS = 'SMS'
 }
 
 export const programData = [
     {
       status: Status.Published,
       channel: Channel.LiveCall,
+      trackedOutcome: "Voluntary Disenrollment within 3 months following outreach",
       title: 'Health Outcomes Survey',
       description: "Target high risk members likely to leave the plan to minimize disenrollment", 
       startDate: '01/12/2024',
@@ -32,6 +34,7 @@ export const programData = [
     {
       status: Status.Published,
       channel: Channel.InPerson,
+      trackedOutcome: "Voluntary Disenrollment within 3 months following outreach",
       title: 'Establishing Care with a Primary Care Physician',
       description: "Target high risk members likely to leave the plan to minimize disenrollment", 
       startDate: '01/12/2024',
@@ -48,6 +51,7 @@ export const programData = [
     {
       status: Status.Published,
       channel: Channel.Online,
+      trackedOutcome: "Voluntary Disenrollment within 3 months following outreach",
       title: 'Breast Cancer Screening',
       description: "Target high risk members likely to leave the plan to minimize disenrollment", 
       startDate: '01/12/2024',
