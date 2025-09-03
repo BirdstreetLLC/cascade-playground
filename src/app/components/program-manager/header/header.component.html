@@ -1,7 +1,11 @@
 <div class="p-8 bg-white flex justify-start items-start">
-    <div class="flex flex-col">
+    <div class="flex flex-col gap-2">
         <h1 [style]="{ color: cascade.cascadeBrand.greyDarkest, fontSize: cascade.cascadeBrand.fontSizeLarger + 'px' }" *ngIf="title">{{title}}</h1>
         <p [style]="{ color: cascade.cascadeBrand.greyDark }" class="text-[18px]" *ngIf="subtitle">{{subtitle}}</p>
+        <div class="flex flex-row gap-4">
+            <span [style]="{ color: cascade.cascadeAlias.primary }" class="cursor-pointer">Program Manager</span>
+            <span [style]="{ color: cascade.cascadeAlias.primary }" class="cursor-pointer" class="text-primary">DPI Data Overview</span>
+        </div>
     </div>
 
     <div class="flex-1"></div>
@@ -17,6 +21,13 @@
     </div>
    
     <div class="flex-1"></div>
+
+    <div *ngIf="dataAsOf" class="flex flex-col gap-2">
+        <app-basic-label label="Date As Of" [value]="dataAsOf"/>
+        <app-pill [pillStyle]="pillStyleEnum.Standard" [label]="startDate + ' - ' + endDate" />
+    </div>
+   
+
     <div *ngIf="definitions">
         <p-button styleClass="p-button-outlined p-button-secondary">
             <img src="https://res.cloudinary.com/dbrkk86kt/image/upload/v1756223198/mpulse/program-manager-prototype/local_library_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24_1_wcoyoy.png" class="w-[16px] h-[16px]" />

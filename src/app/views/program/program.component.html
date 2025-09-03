@@ -1,5 +1,5 @@
 <div class="flex flex-col bg-[#F9FAFF] h-full">
     <app-global-header />
-    <app-header [title]="title" [subtitle]="currentProgram.description" [definitions]="false" [channel]="currentProgram.channel" [trackedOutcome]="currentProgram.trackedOutcome" />
+    <app-header [title]="title" [subtitle]="currentProgram.description" [definitions]="false" [channel]="currentProgram.channel" [trackedOutcome]="currentProgram.trackedOutcome" [dataAsOf]="currentProgram.dataAsOf" [startDate]="currentProgram.startDate" [endDate]="currentProgram.endDate" />
     <p>{{currentProgram.startDate}}</p>
 </div>

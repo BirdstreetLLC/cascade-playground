@@ -3,11 +3,12 @@ import { NgIf } from '@angular/common';
 import { cascadeFigmaVariables } from '../../../cascade';
 import { Button } from 'primeng/button';
 import { BasicLabelComponent } from '../../basic-label/basic-label.component';
+import { PillComponent, PillStyles } from '../../pill/pill.component';
 
 
 @Component({
   selector: 'app-header',
-  imports: [NgIf, Button, BasicLabelComponent],
+  imports: [NgIf, Button, BasicLabelComponent, PillComponent],
   templateUrl: './header.component.html',
   standalone: true,
   styleUrl: './header.component.css',
@@ -26,4 +27,5 @@ export class HeaderComponent {
   @Input() definitions: boolean = false;
   booleanAttribute = this.definitions;
   cascade = cascadeFigmaVariables;
+  pillStyleEnum = PillStyles
 }
