@@ -1,5 +1,5 @@
 <div className="flex flex-row">
     <div [style]="{ color: cascade.cascadeBrand.greyDark }" class="text-[12px]">{{label}}</div> 
     <span *ngIf="!isClickable" [style]="{ color: cascade.cascadeBrand.greyDarkest }" class="text-[14px]">{{ value }}</span>
-    <button (click)="onClick()" class="cursor-pointer flex justify-start items-center" *ngIf="isClickable"><mat-icon [style]="{ color: cascade.cascadeAlias.primary, fontSize: '14px' }" class="relative top-[4px]">edit</mat-icon><span [style]="{ color: cascade.cascadeAlias.primary}" class="text-[14px] text-left">{{value}}</span></button>
+    <button (click)="onClick()" class="cursor-pointer flex justify-start items-start gap-1" *ngIf="isClickable"><mat-icon [style]="{ color: cascade.cascadeAlias.primary, fontSize: '14px' }" class="relative top-[4px]">edit</mat-icon><span [style]="{ color: cascade.cascadeAlias.primary}" class="text-[14px] text-left">{{value}}</span></button>
 </div>

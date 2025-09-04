@@ -1,37 +1,49 @@
-<div class="p-8 bg-white flex justify-start items-start">
-    <div class="flex flex-col gap-1">
-        <h1 [style]="{ color: cascade.cascadeBrand.greyDarkest, fontSize: cascade.cascadeBrand.fontSizeLarger + 'px' }" *ngIf="title">{{title}}</h1>
-        <p [style]="{ color: cascade.cascadeBrand.greyDark }" class="text-[18px]" *ngIf="subtitle">{{subtitle}}</p>
-        <div class="flex flex-row gap-4">
-            <div [style]="{ color: cascade.cascadeAlias.primary }" class="cursor-pointer flex items-center gap-1 justify-center"><span>Program Manager</span> <mat-icon [style]="{ fontSize: '16px' }" class="mt-2">east</mat-icon></div>
-            <div [style]="{ color: cascade.cascadeAlias.primary }" class="cursor-pointer flex items-center gap-1 justify-center text-primary"><span>DPI Data Overview</span> <mat-icon class="mt-2" [style]="{ fontSize: '16px' }">east</mat-icon></div>
+<div class="p-8 bg-white flex flex-col gap-6 justify-center items-center">
+    <div class="justify-center flex items-start" [style]="{ width: fullWidth ? '100%' : '1280px'}">
+        <div class="flex flex-col gap-1">
+            <h1 class="max-w-[500px] leading-tight" [style]="{ color: cascade.cascadeBrand.greyDarkest, fontSize: cascade.cascadeBrand.fontSizeLarger + 'px' }" *ngIf="title">{{title}}</h1>
+            <p [style]="{ color: cascade.cascadeBrand.greyDark }" class="text-[18px]" *ngIf="subtitle">{{subtitle}}</p>
+            <div *ngIf="programManagerUrl || dpiDataOverviewUrl" class="flex flex-row gap-4">
+                <div [style]="{ color: cascade.cascadeAlias.primary }" class="cursor-pointer flex items-center gap-1 justify-center"><span>Program Manager</span> <mat-icon [style]="{ fontSize: '16px' }" class="mt-2">east</mat-icon></div>
+                <div [style]="{ color: cascade.cascadeAlias.primary }" class="cursor-pointer flex items-center gap-1 justify-center text-primary"><span>DPI Data Overview</span> <mat-icon class="mt-2" [style]="{ fontSize: '16px' }">east</mat-icon></div>
+            </div>
+        </div>
+
+        <div class="flex-1"></div>
+
+        <div *ngIf="channel">
+            <app-basic-label label="Channel" [value]="channel"/>
+        </div>
+
+        <div class="flex-1"></div>
+
+        <div *ngIf="trackedOutcome" class="max-w-[320px] flex flex-col justify-start items-start">
+            <app-basic-label label="Tracked Outcome" [value]="trackedOutcome" [isClickable]="true"/>
+        </div>
+    
+        <div class="flex-1"></div>
+
+        <div *ngIf="dataAsOf" class="flex flex-col gap-2 justify-end items-end">
+            <app-basic-label label="Date As Of" [value]="dataAsOf"/>
+            <app-pill [pillStyle]="pillStyleEnum.Standard" [label]="startDate + ' - ' + endDate" />
+        </div>
+
+        <div *ngIf="definitions">
+            <p-button styleClass="p-button-outlined p-button-secondary">
+                <img src="https://res.cloudinary.com/dbrkk86kt/image/upload/v1756223198/mpulse/program-manager-prototype/local_library_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24_1_wcoyoy.png" class="w-[16px] h-[16px]" />
+                <span [style]="{ color: cascade.cascadeBrand.greyDarkest }">Definitions</span>
+            </p-button>
         </div>
     </div>
-
-    <div class="flex-1"></div>
-
-    <div *ngIf="channel">
-        <app-basic-label label="Channel" [value]="channel"/>
-    </div>
-
-    <div class="flex-1"></div>
-
-    <div *ngIf="trackedOutcome">
-        <app-basic-label label="Tracked Outcome" [value]="trackedOutcome" [isClickable]="true"/>
-    </div>
-   
-    <div class="flex-1"></div>
-
-    <div *ngIf="dataAsOf" class="flex flex-col gap-2 justify-end items-end">
-        <app-basic-label label="Date As Of" [value]="dataAsOf"/>
-        <app-pill [pillStyle]="pillStyleEnum.Standard" [label]="startDate + ' - ' + endDate" />
-    </div>
-   
-
-    <div *ngIf="definitions">
-        <p-button styleClass="p-button-outlined p-button-secondary">
-            <img src="https://res.cloudinary.com/dbrkk86kt/image/upload/v1756223198/mpulse/program-manager-prototype/local_library_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24_1_wcoyoy.png" class="w-[16px] h-[16px]" />
-            <span [style]="{ color: cascade.cascadeBrand.greyDarkest }">Definitions</span>
-        </p-button>
+    <div class="justify-start flex items-start" [style]="{ width: fullWidth ? '100%' : '1280px'}">
+        <app-summary-card *ngIf="memberList" label="Members in the Outreach" [data]="memberList" />
+        <div class="flex-1"></div>
+        <app-summary-card *ngIf="didNotEngage" label="Did Not Engage" [data]="didNotEngage" />
+        <div class="flex-1"></div>
+        <app-summary-card *ngIf="engaged" label="Engaged" [data]="engaged" />
+        <div class="flex-1"></div>
+        <app-summary-card *ngIf="engagementRate" label="Engaged Rate" [data]="engagementRate" />
+        <div class="flex-1"></div>
+        <app-summary-card *ngIf="optedOut" label="Opt Out Rate" [data]="optedOut" />
     </div>
 </div>

@@ -1,6 +1,6 @@
 <div class="flex flex-col bg-[#F9FAFF] h-full">
     <app-global-header />
-    <app-header title="Program Manager" subtitle="View, Analyze and Measure your Member Outreach Programs" [definitions]="true" />
+    <app-header [fullWidth]="true" title="Program Manager" subtitle="View, Analyze and Measure your Member Outreach Programs" [definitions]="true" />
     <div class="grid grid-cols-3 gap-4 p-8">
         <!-- <app-card status="Published" title="Health Outcomes Survey" startDate="01/12/2024" endDate="03/12/2025" [engagementRate]="53" [engagementRateTitle]="'Engagement Rate'" [engagementRateSubtitle]="'Last 30 days'" [memberList]="1000" [engaged]="800" [unableToReach]="100" [optedOut]="10" /> -->
          <app-card 
@@ -15,7 +15,7 @@
             [memberList]="program.memberList"
             [engaged]="program.engaged"
             [unableToReach]="program.unableToReach"
-            [optedOut]="program.optOut"
+            [optedOut]="program.optedOut"
         />
     </div>
 </div>

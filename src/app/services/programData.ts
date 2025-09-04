@@ -28,15 +28,15 @@ export const programData = [
       engagementRateSubtitle: 'Your program is ahead of benchmarks!',
       memberList: 127703,
       engaged: 50.77,
+      didNotEngage: 1.2,
       unableToReach: 2.83,
-      optOut: 1.68,
+      optedOut: 1.68,
     },
     {
       status: Status.Published,
       channel: Channel.InPerson,
       trackedOutcome: "Voluntary Disenrollment within 3 months following outreach",
       title: 'Establishing Care with a Primary Care Physician',
-      description: "Target high risk members likely to leave the plan to minimize disenrollment", 
       startDate: '01/12/2024',
       endDate: '03/12/2025',
       dataAsOf: '01/12/2024',
@@ -45,8 +45,9 @@ export const programData = [
       engagementRateSubtitle: 'Your program is ahead of benchmarks!',
       memberList: 127703,
       engaged: 57.84,
+      didNotEngage: 1.2,
       unableToReach: 2.83,
-      optOut: 3.68,
+      optedOut: 3.68,
     }, 
     {
       status: Status.Published,
@@ -62,7 +63,8 @@ export const programData = [
       engagementRateSubtitle: 'Your program is ahead of benchmarks!',
       memberList: 24206,
       engaged: 42.33,
+      didNotEngage: 1.2,
       unableToReach: 2.83,
-      optOut: 3.71,
+      optedOut: 3.71,
     }
 ]
