@@ -1,5 +1,5 @@
 <div
-  class="flex flex-col items-center justify-start bg-[#F9FAFF] h-full w-full"
+  class="flex flex-col items-center justify-start bg-[#F9FAFF] h-full w-full overflow-y-scroll"
 >
   <div class="w-full"><app-global-header /></div>
   <div class="w-full">
@@ -9,8 +9,7 @@
       [definitions]="true"
     />
   </div>
-  <div class="grid grid-cols-3 gap-4 pt-6 max-w-[1280px]">
-    <!-- <app-card status="Published" title="Health Outcomes Survey" startDate="01/12/2024" endDate="03/12/2025" [engagementRate]="53" [engagementRateTitle]="'Engagement Rate'" [engagementRateSubtitle]="'Last 30 days'" [memberList]="1000" [engaged]="800" [unableToReach]="100" [optedOut]="10" /> -->
+  <div class="grid grid-cols-3 gap-4 py-6 max-w-[1280px] h-full">
     <app-card
       *ngFor="let program of programData"
       [status]="program.status"
@@ -26,4 +25,5 @@
       [optedOut]="program.optedOut"
     />
   </div>
+
 </div>
