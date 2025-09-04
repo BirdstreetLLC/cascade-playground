@@ -250,6 +250,17 @@ const Cascade = definePreset(Aura, {
       950: cascadeFigmaVariables.cascadeBrand.goldDarkest,
     },
   },
+  components: {
+    button: {
+      borderRadius:
+        cascadeFigmaVariables.cascadeBrand.radiusSmall.toString() + 'px',
+    },
+    navigation: {
+      submenuLabel: {
+        fontWeight: 'normal',
+      },
+    },
+  },
   semantic: {
     formField: {
       paddingX:
@@ -277,6 +288,11 @@ const Cascade = definePreset(Aura, {
       },
       borderRadius:
         cascadeFigmaVariables.cascadeBrand.radiusSmall.toString() + 'px',
+    },
+    list: {
+      optionGroup: {
+        fontWeight: 'normal',
+      },
     },
     primary: {
       50: cascadeFigmaVariables.cascadeBrand.blueLightest10,

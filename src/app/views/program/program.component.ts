@@ -2,14 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { GlobalHeaderComponent } from '../../components/global-header/global-header.component';
 import { HeaderComponent } from '../../components/program-manager/header/header.component';
-import { CardComponent } from '../../components/card/card.component';
-import { NgFor } from '@angular/common';
 import { programData } from '../../services/programData';
 import { TabMenuModule } from 'primeng/tabmenu';
 import { MenuItem } from 'primeng/api';
+import { ButtonModule } from 'primeng/button';
+import { cascadeFigmaVariables } from '../../cascade';
 @Component({
   selector: 'app-program',
-  imports: [GlobalHeaderComponent, HeaderComponent, TabMenuModule],
+  imports: [GlobalHeaderComponent, HeaderComponent, TabMenuModule, ButtonModule],
   templateUrl: './program.component.html',
   styleUrls: ['./program.component.css'],
 })
@@ -19,6 +19,7 @@ export class ProgramComponent implements OnInit {
   programData = programData;
   title: string = '';
   currentProgram: any = {};
+  cascade = cascadeFigmaVariables;
 
   constructor(private route: ActivatedRoute) {}
 

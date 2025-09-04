@@ -17,8 +17,34 @@
     [didNotEngage]="currentProgram.didNotEngage"
   />
   <div class="w-full flex justify-center bg-white border-b border-gray-200">
-    <div class="w-[1280px]">
+    <div class="w-[1280px] flex justify-center items-center">
       <p-tabMenu [activeItem]="activeItem" [model]="items"></p-tabMenu>
+      <div class="flex-1"></div>
+      <p-button styleClass="p-button-outlined p-button-secondary">
+        <img
+          src="https://res.cloudinary.com/dbrkk86kt/image/upload/v1756223198/mpulse/program-manager-prototype/local_library_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24_1_wcoyoy.png"
+          class="w-[16px] h-[16px]"
+        />
+        <span [style]="{ color: cascade.cascadeBrand.greyDarkest }"
+          >Definitions</span
+        >
+      </p-button>
     </div>
+  </div>
+  <div class="flex justify-center items-center w-full h-full">
+
+    <div class="flex w-[1280px] h-full">
+      <div class="bg-white w-[305px] h-full border-x border-gray-200 p-4">
+        Sidebar
+      </div>
+      <div class="w-full h-full border-r border-gray-200 p-6 flex flex-col justify-start items-center">
+        <div class="bg-white border border-gray-200 p-4 w-full rounded-sm">
+            Card
+        </div>
+      </div>
+    </div>
+   
+    
+    
   </div>
 </div>
