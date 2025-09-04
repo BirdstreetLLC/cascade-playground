@@ -5,14 +5,17 @@ import { HeaderComponent } from '../../components/program-manager/header/header.
 import { CardComponent } from '../../components/card/card.component';
 import { NgFor } from '@angular/common';
 import { programData } from '../../services/programData';
-
+import { TabMenuModule } from 'primeng/tabmenu';
+import { MenuItem } from 'primeng/api';
 @Component({
   selector: 'app-program',
-  imports: [GlobalHeaderComponent, HeaderComponent, CardComponent, NgFor],
+  imports: [GlobalHeaderComponent, HeaderComponent, TabMenuModule],
   templateUrl: './program.component.html',
   styleUrls: ['./program.component.css']
 })
 export class ProgramComponent implements OnInit {
+  items: MenuItem[] | undefined;
+  activeItem: MenuItem | undefined;
   programData = programData;
   title: string = '';
   currentProgram: any = {};
@@ -21,6 +24,12 @@ export class ProgramComponent implements OnInit {
 
   ngOnInit(): void {
     this.title = this.route.snapshot.paramMap.get('title') ?? "";
+    this.items = [
+            { label: 'Overview' },
+            { label: 'Insights'},
+            { label: 'MemberList'},
+        ];
+    this.activeItem = this.items[0];
 
     if (this.programData && this.title) {
       const foundProgram = this.programData.find((program) => program.title === this.title);
