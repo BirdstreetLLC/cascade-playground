@@ -1,22 +1,29 @@
-<div class="flex flex-col items-center justify-start bg-[#F9FAFF] h-full w-full">
-    <div class="w-full"><app-global-header /></div>
-    <div class="w-full"><app-header title="Program Manager" subtitle="View, Analyze and Measure your Member Outreach Programs" [definitions]="true" /></div>
-    <div class="grid grid-cols-3 gap-4 pt-6 max-w-[1280px]">
-        <!-- <app-card status="Published" title="Health Outcomes Survey" startDate="01/12/2024" endDate="03/12/2025" [engagementRate]="53" [engagementRateTitle]="'Engagement Rate'" [engagementRateSubtitle]="'Last 30 days'" [memberList]="1000" [engaged]="800" [unableToReach]="100" [optedOut]="10" /> -->
-         <app-card 
-            *ngFor="let program of programData"
-            [status]="program.status"
-            [title]="program.title"
-            [startDate]="program.startDate"
-            [endDate]="program.endDate"
-            [engagementRate]="program.engagementRate"
-            [engagementRateTitle]="program.engagementRateTitle"
-            [engagementRateSubtitle]="program.engagementRateSubtitle"
-            [memberList]="program.memberList"
-            [engaged]="program.engaged"
-            [unableToReach]="program.unableToReach"
-            [optedOut]="program.optedOut"
-        />
-    </div>
+<div
+  class="flex flex-col items-center justify-start bg-[#F9FAFF] h-full w-full"
+>
+  <div class="w-full"><app-global-header /></div>
+  <div class="w-full">
+    <app-header
+      title="Program Manager"
+      subtitle="View, Analyze and Measure your Member Outreach Programs"
+      [definitions]="true"
+    />
+  </div>
+  <div class="grid grid-cols-3 gap-4 pt-6 max-w-[1280px]">
+    <!-- <app-card status="Published" title="Health Outcomes Survey" startDate="01/12/2024" endDate="03/12/2025" [engagementRate]="53" [engagementRateTitle]="'Engagement Rate'" [engagementRateSubtitle]="'Last 30 days'" [memberList]="1000" [engaged]="800" [unableToReach]="100" [optedOut]="10" /> -->
+    <app-card
+      *ngFor="let program of programData"
+      [status]="program.status"
+      [title]="program.title"
+      [startDate]="program.startDate"
+      [endDate]="program.endDate"
+      [engagementRate]="program.engagementRate"
+      [engagementRateTitle]="program.engagementRateTitle"
+      [engagementRateSubtitle]="program.engagementRateSubtitle"
+      [memberList]="program.memberList"
+      [engaged]="program.engaged"
+      [unableToReach]="program.unableToReach"
+      [optedOut]="program.optedOut"
+    />
+  </div>
 </div>
-

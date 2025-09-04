@@ -54,18 +54,12 @@
     },
     "AuthRoleArn": {
       "Value": {
-        "Fn::GetAtt": [
-          "AuthRole",
-          "Arn"
-        ]
+        "Fn::GetAtt": ["AuthRole", "Arn"]
       }
     },
     "UnauthRoleArn": {
       "Value": {
-        "Fn::GetAtt": [
-          "UnauthRole",
-          "Arn"
-        ]
+        "Fn::GetAtt": ["UnauthRole", "Arn"]
       }
     },
     "DeploymentBucketName": {

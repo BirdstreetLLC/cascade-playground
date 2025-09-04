@@ -1,15 +1,39 @@
 <div class="flex justify-start items-center gap-2 w-[224px] flex-wrap p-4">
-    <div>
-        <p-select onchange="onChange($event)" [options]="conditionals" optionLabel="name" class="w-full md:w-56 !text-[14px] font-medium !text-[#001738]" />
+  <div>
+    <p-select
+      onchange="onChange($event)"
+      [options]="conditionals"
+      optionLabel="name"
+      class="w-full md:w-56 !text-[14px] font-medium !text-[#001738]"
+    />
+  </div>
+  <div class="flex justify-start items-center gap-2">
+    <input
+      type="text"
+      pInputText
+      [defaultValue]="0"
+      class="max-w-[50px] !text-[14px] !font-medium !text-[#001738]"
+    />
+    <div class="w-[28px] h-[9px] flex justify-center items-center">
+      <svg
+        width="10"
+        height="9"
+        viewBox="0 0 10 9"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5.56943 8.16213L4.80238 7.4036L7.46573 4.74025H0.775391V3.6323H7.46573L4.80238 0.973206L5.56943 0.210421L9.54528 4.18627L5.56943 8.16213Z"
+          fill="#5B6B7F"
+        />
+      </svg>
     </div>
-    <div class="flex justify-start items-center gap-2">
-        <input type="text" pInputText [defaultValue]="0" class="max-w-[50px] !text-[14px] !font-medium !text-[#001738]"  />
-        <div class="w-[28px] h-[9px] flex justify-center items-center">
-            <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5.56943 8.16213L4.80238 7.4036L7.46573 4.74025H0.775391V3.6323H7.46573L4.80238 0.973206L5.56943 0.210421L9.54528 4.18627L5.56943 8.16213Z" fill="#5B6B7F"/>
-            </svg>    
-        </div>
-        <input type="text" pInputText [defaultValue]="100" class="max-w-[50px] !text-[14px] !font-medium !text-[#001738]" />
-        <span class="!text-[12px] !font-medium !text-[#5B6B7F]">Conditions</span>
-    </div>
+    <input
+      type="text"
+      pInputText
+      [defaultValue]="100"
+      class="max-w-[50px] !text-[14px] !font-medium !text-[#001738]"
+    />
+    <span class="!text-[12px] !font-medium !text-[#5B6B7F]">Conditions</span>
+  </div>
 </div>

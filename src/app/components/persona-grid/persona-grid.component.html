@@ -1,62 +1,110 @@
 <div class="grid grid-cols-6 gap-1 p-2">
-    <div class="flex flex-col transition items-center min-h-[100px] justify-center gap-1 rounded p-2 border border-gray-100">
-       
-    </div>
-    <div class="flex flex-col transition items-center min-h-[100px] justify-center gap-1 rounded p-2 border border-gray-100">
-        <span>High Admit</span>
-        <span [style.color]="colors.cascadeBrand.greyDark" class="text-[14px]">Acute</span>
-    </div>
-    <div class="flex flex-col transition items-center min-h-[100px] justify-center gap-1 rounded p-2 border border-gray-100">
-        <span>CHF</span>
-        <span [style.color]="colors.cascadeBrand.greyDark" class="text-[14px]">Acute</span>
-    </div>
-    <div class="flex flex-col transition items-center min-h-[100px] justify-center gap-1 rounded p-2 border border-gray-100">
-        <span>Diabetes Comp</span>
-        <span [style.color]="colors.cascadeBrand.greyDark" class="text-[14px]">Chronic</span>
-    </div>
-    <div class="flex flex-col transition items-center min-h-[100px] justify-center gap-1 rounded p-2 border border-gray-100">
-        <span>Depression</span>
-        <span [style.color]="colors.cascadeBrand.greyDark" class="text-[14px]">Behavioral</span>
-    </div>
-    <div class="flex flex-col transition items-center min-h-[100px] justify-center gap-1 rounded p-2 border border-gray-100">
-        <span>Prev Gaps</span>
-        <span [style.color]="colors.cascadeBrand.greyDark" class="text-[14px]">Preventative</span>
-    </div>
-  <ng-container *ngFor="let group of [urbanYoungAdults, ruralSeniors, workingFamilies, lowIncomeUrban]">
-    <button [pTooltip]="tooltipContent" tooltipPosition="top" *ngFor="let persona of group; let i = index" 
-            class="flex flex-col transition items-center min-h-[100px] justify-center gap-1 rounded p-2 cursor-pointer border border-white hover:border-gray-700 hover:shadow-lg"
-            [style.background-color]="i > 0 ? generateHeatColor(persona.total) : '#ffffff'">
-            
-      <span *ngIf="persona.title && i === 0" 
-            [style.color]="getContrastingSpanColor(generateHeatColor(persona.total))" 
-            class="text-sm text-[16px]">
+  <div
+    class="flex flex-col transition items-center min-h-[100px] justify-center gap-1 rounded p-2 border border-gray-100"
+  ></div>
+  <div
+    class="flex flex-col transition items-center min-h-[100px] justify-center gap-1 rounded p-2 border border-gray-100"
+  >
+    <span>High Admit</span>
+    <span [style.color]="colors.cascadeBrand.greyDark" class="text-[14px]"
+      >Acute</span
+    >
+  </div>
+  <div
+    class="flex flex-col transition items-center min-h-[100px] justify-center gap-1 rounded p-2 border border-gray-100"
+  >
+    <span>CHF</span>
+    <span [style.color]="colors.cascadeBrand.greyDark" class="text-[14px]"
+      >Acute</span
+    >
+  </div>
+  <div
+    class="flex flex-col transition items-center min-h-[100px] justify-center gap-1 rounded p-2 border border-gray-100"
+  >
+    <span>Diabetes Comp</span>
+    <span [style.color]="colors.cascadeBrand.greyDark" class="text-[14px]"
+      >Chronic</span
+    >
+  </div>
+  <div
+    class="flex flex-col transition items-center min-h-[100px] justify-center gap-1 rounded p-2 border border-gray-100"
+  >
+    <span>Depression</span>
+    <span [style.color]="colors.cascadeBrand.greyDark" class="text-[14px]"
+      >Behavioral</span
+    >
+  </div>
+  <div
+    class="flex flex-col transition items-center min-h-[100px] justify-center gap-1 rounded p-2 border border-gray-100"
+  >
+    <span>Prev Gaps</span>
+    <span [style.color]="colors.cascadeBrand.greyDark" class="text-[14px]"
+      >Preventative</span
+    >
+  </div>
+  <ng-container
+    *ngFor="
+      let group of [
+        urbanYoungAdults,
+        ruralSeniors,
+        workingFamilies,
+        lowIncomeUrban,
+      ]
+    "
+  >
+    <button
+      [pTooltip]="tooltipContent"
+      tooltipPosition="top"
+      *ngFor="let persona of group; let i = index"
+      class="flex flex-col transition items-center min-h-[100px] justify-center gap-1 rounded p-2 cursor-pointer border border-white hover:border-gray-700 hover:shadow-lg"
+      [style.background-color]="
+        i > 0 ? generateHeatColor(persona.total) : '#ffffff'
+      "
+    >
+      <span
+        *ngIf="persona.title && i === 0"
+        [style.color]="
+          getContrastingSpanColor(generateHeatColor(persona.total))
+        "
+        class="text-sm text-[16px]"
+      >
         {{ persona.title }}
       </span>
-      <span *ngIf="persona.condition && i === 0" 
-            [style.color]="getContrastingSpanColor(generateHeatColor(persona.total))" 
-            class="text-sm">
+      <span
+        *ngIf="persona.condition && i === 0"
+        [style.color]="
+          getContrastingSpanColor(generateHeatColor(persona.total))
+        "
+        class="text-sm"
+      >
         {{ persona.condition }}
       </span>
-      <span *ngIf="persona.members" 
-            [style.color]="getContrastingSpanColor(generateHeatColor(persona.total))" 
-            class="text-sm text-[18px]">
+      <span
+        *ngIf="persona.members"
+        [style.color]="
+          getContrastingSpanColor(generateHeatColor(persona.total))
+        "
+        class="text-sm text-[18px]"
+      >
         {{ persona.members.toLocaleString() }}
       </span>
-      <span *ngIf="persona.total" 
-            [style.color]="getContrastingSpanColor(generateHeatColor(persona.total))" 
-            class="text-sm">
-        {{ persona.total > 0 ? persona.total : '' }}%
+      <span
+        *ngIf="persona.total"
+        [style.color]="
+          getContrastingSpanColor(generateHeatColor(persona.total))
+        "
+        class="text-sm"
+      >
+        {{ persona.total > 0 ? persona.total : "" }}%
       </span>
     </button>
   </ng-container>
 </div>
 
 <ng-template #tooltipContent>
-    <div class="flex flex-col gap-0 justify-center items-center text-[16px]">
-        <span>Lift: 3,240</span>
-        <span>Segment Size: 2,324</span>
-        <span>Percentage: 12.4%</span>
-    </div>
+  <div class="flex flex-col gap-0 justify-center items-center text-[16px]">
+    <span>Lift: 3,240</span>
+    <span>Segment Size: 2,324</span>
+    <span>Percentage: 12.4%</span>
+  </div>
 </ng-template>
-
-

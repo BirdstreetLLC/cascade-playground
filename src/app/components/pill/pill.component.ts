@@ -2,9 +2,9 @@ import { Component, Input } from '@angular/core';
 import { cascadeFigmaVariables } from '../../cascade';
 
 export enum PillStyles {
-    Primary = 'Primary',
-    Tertiary = 'Tertiary',
-    Standard = 'Standard',
+  Primary = 'Primary',
+  Tertiary = 'Tertiary',
+  Standard = 'Standard',
 }
 @Component({
   selector: 'app-pill',
@@ -12,7 +12,6 @@ export enum PillStyles {
   templateUrl: './pill.component.html',
   styleUrl: './pill.component.css',
 })
-
 export class PillComponent {
   @Input() label: string = '';
   @Input() pillStyle: PillStyles = PillStyles.Primary;

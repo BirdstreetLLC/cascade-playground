@@ -1,4 +1,4 @@
-import { Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { PillComponent, PillStyles } from '../pill/pill.component';
 import { Button } from 'primeng/button';
 import { MatIcon } from '@angular/material/icon';
@@ -26,6 +26,6 @@ export class CardComponent {
   @Input() unableToReach: number = 0;
   @Input() optedOut: number = 0;
 
-  cascade = cascadeFigmaVariables
-  pillStyleEnum = PillStyles
+  cascade = cascadeFigmaVariables;
+  pillStyleEnum = PillStyles;
 }

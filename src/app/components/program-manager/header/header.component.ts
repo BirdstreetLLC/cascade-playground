@@ -8,10 +8,16 @@ import { MatIcon } from '@angular/material/icon';
 import { SummaryCardComponent } from '../../summary-card/summary-card.component';
 import { DataType } from '../../summary-card/summary-card.component';
 
-
 @Component({
   selector: 'app-header',
-  imports: [NgIf, Button, BasicLabelComponent, PillComponent, MatIcon, SummaryCardComponent],
+  imports: [
+    NgIf,
+    Button,
+    BasicLabelComponent,
+    PillComponent,
+    MatIcon,
+    SummaryCardComponent,
+  ],
   templateUrl: './header.component.html',
   standalone: true,
   styleUrl: './header.component.css',
@@ -38,6 +44,6 @@ export class HeaderComponent {
 
   booleanAttribute = this.definitions;
   cascade = cascadeFigmaVariables;
-  pillStyleEnum = PillStyles
-  dataTypeEnum = DataType
+  pillStyleEnum = PillStyles;
+  dataTypeEnum = DataType;
 }

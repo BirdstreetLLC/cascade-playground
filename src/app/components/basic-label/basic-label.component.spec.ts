@@ -8,9 +8,8 @@ describe('BasicLabelComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BasicLabelComponent]
-    })
-    .compileComponents();
+      imports: [BasicLabelComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(BasicLabelComponent);
     component = fixture.componentInstance;

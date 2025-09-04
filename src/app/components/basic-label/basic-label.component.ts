@@ -7,10 +7,10 @@ import { MatIcon } from '@angular/material/icon';
   selector: 'app-basic-label',
   imports: [NgIf, MatIcon],
   templateUrl: './basic-label.component.html',
-  styleUrl: './basic-label.component.css'
+  styleUrl: './basic-label.component.css',
 })
 export class BasicLabelComponent {
-  cascade = cascadeFigmaVariables
+  cascade = cascadeFigmaVariables;
   @Input() label: string = '';
   @Input() value: string = '';
   @Input() onClick: () => void = () => {};
