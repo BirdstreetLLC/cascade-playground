@@ -27,7 +27,7 @@ export class ProgramComponent implements OnInit {
     this.items = [
             { label: 'Overview' },
             { label: 'Insights'},
-            { label: 'MemberList'},
+            { label: 'Member List'},
         ];
     this.activeItem = this.items[0];
 
