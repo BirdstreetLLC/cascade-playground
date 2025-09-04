@@ -1,6 +1,7 @@
 <div [style]="{ borderColor: cascade.cascadeBrand.greyLight, borderRadius: cascade.cascadeBrand.radiusSmall + 'px'}" class="flex flex-col justify-center items-center border p-4 gap-2 w-[150px] h-[130px]">
     <span class="text-center text-[14px]" [style]="{color: cascade.cascadeBrand.greyDark}">{{label}}</span>
     <span class="text-center text-2xl font-bold" [style]="{ color: textColor, fontSize: cascade.cascadeBrand.fontSizeLarger + 'px'}">{{ dataType == dataTypeEnum.Number ? data.toLocaleString() : data.toString()}}</span>
-    <span *ngIf="link" class="text-center text-[12px]" [style]="{color: cascade.cascadeAlias.primary}">{{link}}</span>
+    <span *ngIf="link" class="text-center text-[14px] cursor-pointer" [style]="{color: cascade.cascadeAlias.primary}">{{link}}</span>
+    <div *ngIf="!link" class="h-[12px]"></div>
 </div>
 
