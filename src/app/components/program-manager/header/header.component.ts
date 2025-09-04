@@ -6,6 +6,7 @@ import { BasicLabelComponent } from '../../basic-label/basic-label.component';
 import { PillComponent, PillStyles } from '../../pill/pill.component';
 import { MatIcon } from '@angular/material/icon';
 import { SummaryCardComponent } from '../../summary-card/summary-card.component';
+import { DataType } from '../../summary-card/summary-card.component';
 
 
 @Component({
@@ -35,9 +36,8 @@ export class HeaderComponent {
   @Input() didNotEngage: number = 0;
   @Input() fullWidth: boolean = false;
 
-
-
   booleanAttribute = this.definitions;
   cascade = cascadeFigmaVariables;
   pillStyleEnum = PillStyles
+  dataTypeEnum = DataType
 }

@@ -36,14 +36,14 @@
         </div>
     </div>
     <div class="justify-start flex items-start" [style]="{ width: fullWidth ? '100%' : '1280px'}">
-        <app-summary-card *ngIf="memberList" label="Members in the Outreach" [data]="memberList" />
+        <app-summary-card [dataType]="dataTypeEnum.Number" *ngIf="memberList" label="Members in the Outreach" [data]="memberList" />
         <div class="flex-1"></div>
-        <app-summary-card *ngIf="didNotEngage" label="Did Not Engage" [data]="didNotEngage" />
+        <app-summary-card [dataType]="dataTypeEnum.Percentage" *ngIf="didNotEngage" label="Did Not Engage" [data]="didNotEngage" />
         <div class="flex-1"></div>
-        <app-summary-card *ngIf="engaged" label="Engaged" [data]="engaged" />
+        <app-summary-card [dataType]="dataTypeEnum.Number" *ngIf="engaged" label="Engaged" [data]="engaged" />
         <div class="flex-1"></div>
-        <app-summary-card *ngIf="engagementRate" label="Engaged Rate" [data]="engagementRate" />
+        <app-summary-card [dataType]="dataTypeEnum.Percentage" *ngIf="engagementRate" label="Engaged Rate" [data]="engagementRate" />
         <div class="flex-1"></div>
-        <app-summary-card *ngIf="optedOut" label="Opt Out Rate" [data]="optedOut" />
+        <app-summary-card [dataType]="dataTypeEnum.Negative" *ngIf="optedOut" label="Opt Out Rate" [data]="optedOut" />
     </div>
 </div>

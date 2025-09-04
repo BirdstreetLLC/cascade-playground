@@ -1,14 +1,15 @@
-import { Component, Input, input } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { PillComponent, PillStyles } from '../pill/pill.component';
 import { Button } from 'primeng/button';
 import { MatIcon } from '@angular/material/icon';
 import { cascadeFigmaVariables } from '../../cascade';
-import { DecimalPipe, NgIf } from '@angular/common';
+import { DecimalPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-card',
-  imports: [PillComponent, Button, MatIcon, DecimalPipe, RouterLink],
+  imports: [PillComponent, Button, MatIcon, DecimalPipe, RouterLink, NgIf],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css',
 })

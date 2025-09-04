@@ -10,9 +10,12 @@
         <div class="flex flex-row justify-center items-center gap-1"><span class="text-gray-400">Start Date: </span> {{startDate}} <mat-icon [style]="{ color: cascade.cascadeBrand.greyDark, fontSize: '14px' }" class="mt-2 ml-2">arrow_forward</mat-icon>  {{endDate}}</div>
     </div>
 
-    <div class="flex justify-start w-full items-center px-4 py-2 my-2" [style]="{ backgroundColor: cascade.cascadeAlias.tertiary }">
-        <div>
+    <div class="flex justify-start w-full items-center px-4 py-2 my-2" [style]="{ backgroundColor: engagementRate > 50 ? cascade.cascadeAlias.tertiary : cascade.cascadeBrand.redLighter}">
+        <div *ngIf="engagementRate > 50"> 
             <img src="https://res.cloudinary.com/dbrkk86kt/image/upload/v1756230956/mpulse/program-manager-prototype/person_celebrate_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24_1_ug0rfe.png" width="24" height="24" />
+        </div>
+        <div *ngIf="engagementRate <= 50"> 
+            <mat-icon class="mt-1" [style]="{ color: 'white', fontSize: '24px' }">sentiment_dissatisfied</mat-icon>
         </div>
         <div class="flex flex-col ml-2">
             <span [style]="{ color: 'white', fontSize: '16px' }">{{engagementRate}}% {{engagementRateTitle}} </span>
