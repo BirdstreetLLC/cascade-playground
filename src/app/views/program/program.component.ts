@@ -7,21 +7,31 @@ import { TabMenuModule } from 'primeng/tabmenu';
 import { MenuItem } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { cascadeFigmaVariables } from '../../cascade';
+import { NgIf } from '@angular/common';
+
 @Component({
   selector: 'app-program',
-  imports: [GlobalHeaderComponent, HeaderComponent, TabMenuModule, ButtonModule],
+  imports: [GlobalHeaderComponent, HeaderComponent, TabMenuModule, ButtonModule, NgIf],
   templateUrl: './program.component.html',
   styleUrls: ['./program.component.css'],
 })
 export class ProgramComponent implements OnInit {
   items: MenuItem[] | undefined;
-  activeItem: MenuItem | undefined;
+  public activeItem: MenuItem | undefined;
   programData = programData;
   title: string = '';
   currentProgram: any = {};
   cascade = cascadeFigmaVariables;
 
-  constructor(private route: ActivatedRoute) {}
+
+  constructor(private route: ActivatedRoute) {
+  
+  }
+
+
+    onActiveItemChange(event: MenuItem) {
+        this.activeItem = event;
+    }
 
   ngOnInit(): void {
     this.title = this.route.snapshot.paramMap.get('title') ?? '';
@@ -31,6 +41,8 @@ export class ProgramComponent implements OnInit {
       { label: 'Member List' },
     ];
     this.activeItem = this.items[0];
+
+
 
     if (this.programData && this.title) {
       const foundProgram = this.programData.find(
