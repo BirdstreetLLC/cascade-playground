@@ -22,3 +22,9 @@ body {
 .custom-tabs .p-menuitem-text{
   font-weight: 400!important;
 }
+.p-tabmenu-nav {
+  border-bottom: none !important;
+}
+.p-tabmenu-nav .p-tabmenuitem-active {
+  border-bottom: 2px solid #1d4ed8 !important;
+}
