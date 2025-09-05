@@ -19,3 +19,6 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+.custom-tabs .p-menuitem-text{
+  font-weight: 400!important;
+}
