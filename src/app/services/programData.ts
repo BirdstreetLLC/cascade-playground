@@ -1,12 +1,12 @@
 import { channel } from 'node:diagnostics_channel';
 
-enum Status {
+export enum Status {
   Published = 'Published',
   Draft = 'Draft',
   Archived = 'Archived',
 }
 
-enum Channel {
+export enum Channel {
   Online = 'Online',
   InPerson = 'In Person',
   LiveCall = 'Live Call',
@@ -15,7 +15,7 @@ enum Channel {
 
 export const programData = [
   {
-    status: Status.Published,
+    status: Status.Draft,
     channel: Channel.LiveCall,
     trackedOutcome:
       'Voluntary Disenrollment within 3 months following outreach',

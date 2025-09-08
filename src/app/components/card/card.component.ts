@@ -6,6 +6,7 @@ import { cascadeFigmaVariables } from '../../cascade';
 import { DecimalPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { NgIf } from '@angular/common';
+import { Status } from '../../services/programData';
 
 @Component({
   selector: 'app-card',
@@ -28,4 +29,5 @@ export class CardComponent {
 
   cascade = cascadeFigmaVariables;
   pillStyleEnum = PillStyles;
+  statusEnum = Status;
 }
