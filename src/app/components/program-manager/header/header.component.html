@@ -102,6 +102,7 @@
       *ngIf="didNotEngage"
       label="Did Not Engage"
       [data]="didNotEngage"
+      [onClick]="onClick"
     />
     <div class="flex-1"></div>
     <app-summary-card
@@ -110,6 +111,8 @@
       *ngIf="engaged"
       label="Engaged"
       [data]="engaged"
+      [onClick]="onClick"
+  
     />
     <div class="flex-1"></div>
     <app-summary-card
@@ -125,6 +128,7 @@
       *ngIf="optedOut"
       label="Opt Out Rate"
       [data]="optedOut"
+      [onClick]="onClick"
     />
   </div>
 </div>

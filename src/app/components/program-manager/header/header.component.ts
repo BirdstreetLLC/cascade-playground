@@ -1,4 +1,4 @@
-import { Component, Input, booleanAttribute } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { NgIf } from '@angular/common';
 import { cascadeFigmaVariables } from '../../../cascade';
 import { Button } from 'primeng/button';
@@ -41,6 +41,10 @@ export class HeaderComponent {
   @Input() optedOut: number = 0;
   @Input() didNotEngage: number = 0;
   @Input() fullWidth: boolean = false;
+
+  onClick() {
+    console.log('clicked');
+  }
 
   booleanAttribute = this.definitions;
   cascade = cascadeFigmaVariables;

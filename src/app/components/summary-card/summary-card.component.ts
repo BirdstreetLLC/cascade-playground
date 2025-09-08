@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { cascadeFigmaVariables } from '../../cascade';
 import { NgIf } from '@angular/common';
 
@@ -17,10 +17,14 @@ export class SummaryCardComponent {
   @Input() label: string = '';
   @Input() data: number = 0;
   @Input() link: string = '';
-  @Input() onClick: () => void = () => {};
   @Input() dataType: DataType = DataType.Number;
+  @Input() onClick: any = () => {};
+
   cascade = cascadeFigmaVariables;
   dataTypeEnum = DataType;
+
+
+
 
   get textColor(): string {
     switch (this.dataType) {

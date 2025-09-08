@@ -20,11 +20,11 @@
       dataType == dataTypeEnum.Number ? data.toLocaleString() : data.toString()
     }}</span
   >
-  <span
-    *ngIf="link"
+  <button
+    *ngIf="link" (click)="onClick()"
     class="text-center text-[14px] cursor-pointer"
     [style]="{ color: cascade.cascadeAlias.primary }"
-    >{{ link }}</span
+    >{{ link }}</button
   >
   <div *ngIf="!link" class="h-[12px]"></div>
 </div>

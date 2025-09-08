@@ -8,6 +8,7 @@ import { MenuItem } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { cascadeFigmaVariables } from '../../cascade';
 import { NgIf } from '@angular/common';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-program',
@@ -28,10 +29,16 @@ export class ProgramComponent implements OnInit {
   
   }
 
+  onActiveItemChange(event: MenuItem) {
+      this.activeItem = event;
+  }
 
-    onActiveItemChange(event: MenuItem) {
-        this.activeItem = event;
-    }
+  onSetActiveItem(event: MenuItem | undefined) {
+    this.activeItem = event;
+    console.log("clicked")
+  }
+
+
 
   ngOnInit(): void {
     this.title = this.route.snapshot.paramMap.get('title') ?? '';
@@ -41,8 +48,6 @@ export class ProgramComponent implements OnInit {
       { label: 'Member List' },
     ];
     this.activeItem = this.items[0];
-
-
 
     if (this.programData && this.title) {
       const foundProgram = this.programData.find(
