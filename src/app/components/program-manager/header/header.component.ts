@@ -7,6 +7,7 @@ import { PillComponent, PillStyles } from '../../pill/pill.component';
 import { MatIcon } from '@angular/material/icon';
 import { SummaryCardComponent } from '../../summary-card/summary-card.component';
 import { DataType } from '../../summary-card/summary-card.component';
+import { Status } from '../../../services/programData';
 
 @Component({
   selector: 'app-header',
@@ -25,6 +26,7 @@ import { DataType } from '../../summary-card/summary-card.component';
 export class HeaderComponent {
   @Input() title: string = '';
   @Input() subtitle: string = '';
+  @Input() status: string = '';
   @Input() channel: string = '';
   @Input() dataAsOf: string = '';
   @Input() startDate: string = '';
@@ -41,12 +43,10 @@ export class HeaderComponent {
   @Input() optedOut: number = 0;
   @Input() didNotEngage: number = 0;
   @Input() fullWidth: boolean = false;
-
-  onClick() {
-    console.log('clicked');
-  }
+  @Input() onClick: any = () => {};
 
   booleanAttribute = this.definitions;
+  statusEnum = Status;
   cascade = cascadeFigmaVariables;
   pillStyleEnum = PillStyles;
   dataTypeEnum = DataType;

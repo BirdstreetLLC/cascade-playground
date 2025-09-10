@@ -17,7 +17,8 @@
     [didNotEngage]="currentProgram.didNotEngage"
     programManagerUrl="Program Manager"
     dpiDataOverviewUrl="Data Overview"
-    (onViewMembersClick)="onSetActiveItem(items && items[2] ? items[2] : undefined)"
+    [status]="currentProgram.status"
+    [onClick]="handleOnClick"
   />
   <div class="w-full flex justify-center bg-white border-b border-gray-200">
     <div class="w-[1280px] flex justify-center items-center">

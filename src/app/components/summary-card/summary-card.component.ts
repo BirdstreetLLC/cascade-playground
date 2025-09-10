@@ -23,9 +23,6 @@ export class SummaryCardComponent {
   cascade = cascadeFigmaVariables;
   dataTypeEnum = DataType;
 
-
-
-
   get textColor(): string {
     switch (this.dataType) {
       case DataType.Number:

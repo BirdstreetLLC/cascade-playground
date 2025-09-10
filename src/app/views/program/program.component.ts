@@ -12,33 +12,25 @@ import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-program',
-  imports: [GlobalHeaderComponent, HeaderComponent, TabMenuModule, ButtonModule, NgIf],
+  imports: [
+    GlobalHeaderComponent,
+    HeaderComponent,
+    TabMenuModule,
+    ButtonModule,
+    NgIf,
+  ],
   templateUrl: './program.component.html',
   styleUrls: ['./program.component.css'],
 })
 export class ProgramComponent implements OnInit {
-  items: MenuItem[] | undefined;
-  public activeItem: MenuItem | undefined;
+  items: MenuItem[] = [];
+  public activeItem: MenuItem = { label: 'Overview' };
   programData = programData;
   title: string = '';
   currentProgram: any = {};
   cascade = cascadeFigmaVariables;
 
-
-  constructor(private route: ActivatedRoute) {
-  
-  }
-
-  onActiveItemChange(event: MenuItem) {
-      this.activeItem = event;
-  }
-
-  onSetActiveItem(event: MenuItem | undefined) {
-    this.activeItem = event;
-    console.log("clicked")
-  }
-
-
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.title = this.route.snapshot.paramMap.get('title') ?? '';
@@ -57,5 +49,14 @@ export class ProgramComponent implements OnInit {
         this.currentProgram = foundProgram;
       }
     }
+  }
+
+  onActiveItemChange(event: MenuItem): void {
+    this.activeItem = event;
+    console.log('click');
+  }
+
+  public handleOnClick(): void {
+    this.onActiveItemChange(this.items[1]);
   }
 }

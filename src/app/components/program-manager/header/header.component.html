@@ -6,16 +6,19 @@
     [style]="{ width: fullWidth ? '100%' : '1280px' }"
   >
     <div class="flex flex-col gap-1">
-      <h1
-        class="max-w-[500px] leading-tight"
-        [style]="{
-          color: cascade.cascadeBrand.greyDarkest,
-          fontSize: cascade.cascadeBrand.fontSizeLarger + 'px',
-        }"
+ 
+      <div
+        class="max-w-[500px] leading-tight flex flex-col justify-start items-start gap-1"
+        
         *ngIf="title"
       >
-        {{ title }}
-      </h1>
+       <app-pill [label]="status" [pillStyle]="status === statusEnum.Published ? pillStyleEnum.Tertiary : pillStyleEnum.Standard" />
+        <h1 [style]="{
+          color: cascade.cascadeBrand.greyDarkest,
+          fontSize: cascade.cascadeBrand.fontSizeLarger + 'px',
+        }">{{ title }}</h1>
+       
+      </div> 
       <p
         [style]="{ color: cascade.cascadeBrand.greyDark }"
         class="text-[18px]"
