@@ -1,9 +1,9 @@
 import { channel } from 'node:diagnostics_channel';
 
 export enum Status {
-  Published = 'Launched',
-  Draft = 'Active',
-  Archived = 'Complete',
+  Published = 'Active',
+  Draft = 'Complete',
+  Archived = 'Launched',
 }
 
 export enum Channel {
