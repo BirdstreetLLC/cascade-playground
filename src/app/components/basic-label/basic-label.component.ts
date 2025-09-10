@@ -15,4 +15,9 @@ export class BasicLabelComponent {
   @Input() value: string = '';
   @Input() onClick: () => void = () => {};
   @Input() isClickable: boolean = false;
+
+  valueIsArray(value: any) {
+    return Array.isArray(value) ? value.join(', ') : value;
+  }
+
 }
