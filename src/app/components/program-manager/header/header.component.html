@@ -12,7 +12,7 @@
         
         *ngIf="title"
       >
-       <app-pill [label]="status" [pillStyle]="status === statusEnum.Published ? pillStyleEnum.Tertiary : pillStyleEnum.Standard" />
+       <app-pill *ngIf="status" [label]="status" [pillStyle]="status === statusEnum.Published ? pillStyleEnum.Tertiary : pillStyleEnum.Standard" />
         <h1 [style]="{
           color: cascade.cascadeBrand.greyDarkest,
           fontSize: cascade.cascadeBrand.fontSizeLarger + 'px',
