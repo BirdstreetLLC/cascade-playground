@@ -44,8 +44,8 @@
       <div class="w-full h-full p-6 flex flex-col justify-start items-center">
         <div class="bg-white border border-gray-200 p-4 w-full rounded-sm">
             Card
-            {{activeItem?.label}}
-            <app-table />
+           <app-table *ngIf="activeItem?.label === 'Member List'" [tableData]="memberList" />
+            
         </div>
       </div>
     </div>

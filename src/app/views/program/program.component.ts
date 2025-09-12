@@ -11,6 +11,7 @@ import { NgIf } from '@angular/common';
 import { Observable } from 'rxjs';
 import { TableComponent } from "../../components/table/table.component";
 import { programManagerPrototypeImg } from '../../consts/consts';
+import { memberData } from '../../services/memberData';
 
 @Component({
   selector: 'app-program',
@@ -33,6 +34,7 @@ export class ProgramComponent implements OnInit {
   currentProgram: any = {};
   cascade = cascadeFigmaVariables;
   programManagerScreen = programManagerPrototypeImg;
+  memberList = memberData?.rows ?? [];
 
   constructor(private route: ActivatedRoute) {}
 
@@ -59,6 +61,8 @@ export class ProgramComponent implements OnInit {
     this.activeItem = event;
     console.log('click');
   }
+
+
 
   public handleOnClick(): void {
     this.onActiveItemChange(this.items[1]);
