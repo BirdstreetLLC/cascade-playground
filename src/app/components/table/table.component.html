@@ -1,1 +1,13 @@
-<p>table works!</p>
+<p-table [value]="tableData" styleClass="p-datatable-gridlines" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Member ID</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-member>
+        <tr>
+            <td>{{ member.member_id ?? '-' }}</td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="summary"> Footer </ng-template>
+</p-table>
