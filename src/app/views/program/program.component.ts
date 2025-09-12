@@ -9,6 +9,8 @@ import { ButtonModule } from 'primeng/button';
 import { cascadeFigmaVariables } from '../../cascade';
 import { NgIf } from '@angular/common';
 import { Observable } from 'rxjs';
+import { TableComponent } from "../../components/table/table.component";
+import { programManagerPrototypeImg } from '../../consts/consts';
 
 @Component({
   selector: 'app-program',
@@ -18,7 +20,8 @@ import { Observable } from 'rxjs';
     TabMenuModule,
     ButtonModule,
     NgIf,
-  ],
+    TableComponent
+],
   templateUrl: './program.component.html',
   styleUrls: ['./program.component.css'],
 })
@@ -29,6 +32,7 @@ export class ProgramComponent implements OnInit {
   title: string = '';
   currentProgram: any = {};
   cascade = cascadeFigmaVariables;
+  programManagerScreen = programManagerPrototypeImg;
 
   constructor(private route: ActivatedRoute) {}
 
