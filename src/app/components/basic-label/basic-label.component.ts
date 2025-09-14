@@ -19,5 +19,4 @@ export class BasicLabelComponent {
   valueIsArray(value: any) {
     return Array.isArray(value) ? value.join(', ') : value;
   }
-
 }

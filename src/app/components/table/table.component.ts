@@ -3,10 +3,10 @@ import { TableModule } from 'primeng/table';
 
 @Component({
   selector: 'app-table',
-  imports: [TableModule ],
+  imports: [TableModule],
   templateUrl: './table.component.html',
-  styleUrl: './table.component.css'
+  styleUrl: './table.component.css',
 })
 export class TableComponent {
-   @Input() tableData: Array<any> = [];
+  @Input() tableData: Array<any> = [];
 }

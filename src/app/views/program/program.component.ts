@@ -9,7 +9,7 @@ import { ButtonModule } from 'primeng/button';
 import { cascadeFigmaVariables } from '../../cascade';
 import { NgIf } from '@angular/common';
 import { Observable } from 'rxjs';
-import { TableComponent } from "../../components/table/table.component";
+import { TableComponent } from '../../components/table/table.component';
 import { programManagerPrototypeImg } from '../../consts/consts';
 import { memberData } from '../../services/memberData';
 
@@ -21,8 +21,8 @@ import { memberData } from '../../services/memberData';
     TabMenuModule,
     ButtonModule,
     NgIf,
-    TableComponent
-],
+    TableComponent,
+  ],
   templateUrl: './program.component.html',
   styleUrls: ['./program.component.css'],
 })
@@ -61,8 +61,6 @@ export class ProgramComponent implements OnInit {
     this.activeItem = event;
     console.log('click');
   }
-
-
 
   public handleOnClick(): void {
     this.onActiveItemChange(this.items[1]);
