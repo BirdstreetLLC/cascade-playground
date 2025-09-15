@@ -76,6 +76,10 @@
       />
     </div>
 
+    <div *ngIf="isProgram">
+      <app-program-tiered-menu />
+    </div>
+
     <div *ngIf="definitions">
       <p-button styleClass="p-button-outlined p-button-secondary">
         <img

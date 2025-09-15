@@ -8,6 +8,7 @@ import { MatIcon } from '@angular/material/icon';
 import { SummaryCardComponent } from '../../summary-card/summary-card.component';
 import { DataType } from '../../summary-card/summary-card.component';
 import { Status } from '../../../services/programData';
+import { ProgramTieredMenuComponent } from '../program-tiered-menu/program-tiered-menu.component';
 
 @Component({
   selector: 'app-header',
@@ -18,6 +19,7 @@ import { Status } from '../../../services/programData';
     PillComponent,
     MatIcon,
     SummaryCardComponent,
+    ProgramTieredMenuComponent,
   ],
   templateUrl: './header.component.html',
   standalone: true,
@@ -50,4 +52,8 @@ export class HeaderComponent {
   cascade = cascadeFigmaVariables;
   pillStyleEnum = PillStyles;
   dataTypeEnum = DataType;
+
+  url = window.location.href;
+
+  isProgram = this.url.includes('program/');
 }
