@@ -20,7 +20,7 @@
     [status]="currentProgram.status"
     [onClick]="handleOnClick"
   />
-  <div class="w-full flex justify-center bg-white border-b border-gray-200">
+  <div class="w-full flex justify-center items-center bg-white border-b border-gray-200">
     <div class="w-[1280px] flex justify-center items-center">
       <p-tabMenu (activeItemChange)="onActiveItemChange($event)" styleClass="custom-tabs" [activeItem]="activeItem" [model]="items"></p-tabMenu>
       <div class="flex-1"></div>
@@ -36,12 +36,13 @@
     </div>
   </div>
   <div class="flex justify-center items-center w-full h-full">
-    <div class="flex w-[1280px] h-full">
+    <div class="flex w-[1280px] h-full justify-center items-center">
       
-      <div *ngIf="activeItem?.label !== 'Overview'" class="bg-white w-[385px] h-full border-x border-gray-200 p-4">
-        Sidebar
+      <div *ngIf="activeItem?.label !== 'Overview'" class="bg-white w-[305px] h-full border-x border-gray-200 p-4 flex flex-col gap-4 justify-start items-center">
+        <img src="https://res.cloudinary.com/dbrkk86kt/image/upload/v1757967985/mpulse/program-manager-prototype/filters-applied_finc2h.png" />
+        <img src="https://res.cloudinary.com/dbrkk86kt/image/upload/v1757967985/mpulse/program-manager-prototype/condition-count_oo81xb.png" />
       </div>
-      <div class="w-full h-full p-6 flex flex-col justify-start items-center">
+      <div class="w-full h-full p-6 flex flex-col justify-start items-center max-w-[970px]">
         <div class="bg-white border border-gray-200 p-4 w-full rounded-sm">
            <app-table *ngIf="activeItem?.label === 'Member List'" [tableData]="memberList" />    
            <div *ngIf="activeItem?.label === 'Overview'">
