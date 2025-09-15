@@ -44,6 +44,9 @@
       <div class="w-full h-full p-6 flex flex-col justify-start items-center">
         <div class="bg-white border border-gray-200 p-4 w-full rounded-sm">
            <app-table *ngIf="activeItem?.label === 'Member List'" [tableData]="memberList" />    
+           <div *ngIf="activeItem?.label === 'Overview'">
+              <img src="https://res.cloudinary.com/dbrkk86kt/image/upload/v1757965282/mpulse/program-manager-prototype/graph-program_otohhp.png" width="100%" />
+           </div>
         </div>
       </div>
     </div>

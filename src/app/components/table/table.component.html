@@ -1,23 +1,26 @@
-<p-table [scrollable]="true" [paginator]="true"
-    [rows]="5" [value]="tableData" styleClass="p-datatable-striped" [tableStyle]="{ 'width': '100%' }">
+<p-table [scrollable]="true" scrollDirection="horizontal" styleClass="w-full" [paginator]="true" [rows]="5" [value]="tableData">
     <ng-template pTemplate="header">
         <tr>
-            <th>Member ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Age</th>
-            <th>Gender</th>
-            <th>Primary Language</th>
-            <th>Line of Business</th>
+            <th ><div>Member ID</div></th>
+            <th >First Name</th>
+            <th >Last Name</th>
+            <th >Age</th>
+            <th >Gender</th>
+            <th >Primary Language</th>
+            <th >Line of Business</th>
+            <th >Primary Language</th>
+            <th >Line of Business</th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-member >
         <tr>
-            <td>{{ member.member_id ?? '-' }}</td>
-            <td class="text-">{{ member.first_name ?? '-' }}</td>
+            <td><div><button [style.color]="cascade.cascadeAlias.primary" class="cursor-pointer">{{ member.member_id ?? '-' }}</button></div></td>
+            <td>{{ member.first_name ?? '-' }}</td>
             <td>{{ member?.last_name ?? '-' }}</td>
             <td>{{ member?.age ?? '-' }}</td>
             <td>{{ member?.gender ?? '-' }}</td>
+            <td>{{ member?.language ?? '-' }}</td>
+            <td>{{ member?.line_of_business ?? '-' }}</td>
             <td>{{ member?.language ?? '-' }}</td>
             <td>{{ member?.line_of_business ?? '-' }}</td>
         </tr>
