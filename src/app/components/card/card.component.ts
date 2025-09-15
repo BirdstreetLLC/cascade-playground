@@ -11,7 +11,15 @@ import { ProgramTieredMenuComponent } from '../program-manager/program-tiered-me
 
 @Component({
   selector: 'app-card',
-  imports: [PillComponent, Button, MatIcon, DecimalPipe, RouterLink, NgIf, ProgramTieredMenuComponent],
+  imports: [
+    PillComponent,
+    Button,
+    MatIcon,
+    DecimalPipe,
+    RouterLink,
+    NgIf,
+    ProgramTieredMenuComponent,
+  ],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css',
 })

@@ -8,10 +8,11 @@ import { MenuItem } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { cascadeFigmaVariables } from '../../cascade';
 import { NgIf } from '@angular/common';
-import { Observable } from 'rxjs';
 import { TableComponent } from '../../components/table/table.component';
 import { programManagerPrototypeImg } from '../../consts/consts';
 import { memberData } from '../../services/memberData';
+import { Button } from 'primeng/button';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-program',
@@ -22,7 +23,9 @@ import { memberData } from '../../services/memberData';
     ButtonModule,
     NgIf,
     TableComponent,
-  ],
+    Button,
+    MatIcon
+],
   templateUrl: './program.component.html',
   styleUrls: ['./program.component.css'],
 })

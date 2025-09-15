@@ -18,18 +18,18 @@ export class ProgramTieredMenuComponent {
       {
         label: 'Publish Program',
         icon: 'publish',
-        command: () => this.onPublishProgram()
+        command: () => this.onPublishProgram(),
       },
       {
         label: 'Edit',
         icon: 'edit',
-        command: () => this.onEditProgram()
+        command: () => this.onEditProgram(),
       },
       {
         label: 'Delete',
         icon: 'delete',
-        command: () => this.onDeleteProgram()
-      }
+        command: () => this.onDeleteProgram(),
+      },
     ];
   }
 
@@ -40,7 +40,6 @@ export class ProgramTieredMenuComponent {
   onActiveItemChange(event: MenuItem) {
     console.log(event);
   }
-
 
   onPublishProgram() {
     console.log('Publish Program');
