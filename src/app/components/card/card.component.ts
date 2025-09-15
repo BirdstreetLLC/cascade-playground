@@ -7,10 +7,11 @@ import { DecimalPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { NgIf } from '@angular/common';
 import { Status } from '../../services/programData';
+import { ProgramTieredMenuComponent } from '../program-manager/program-tiered-menu/program-tiered-menu.component';
 
 @Component({
   selector: 'app-card',
-  imports: [PillComponent, Button, MatIcon, DecimalPipe, RouterLink, NgIf],
+  imports: [PillComponent, Button, MatIcon, DecimalPipe, RouterLink, NgIf, ProgramTieredMenuComponent],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css',
 })
