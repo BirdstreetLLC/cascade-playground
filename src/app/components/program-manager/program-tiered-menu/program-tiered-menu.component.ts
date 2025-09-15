@@ -13,7 +13,48 @@ import { MatIcon } from '@angular/material/icon';
 export class ProgramTieredMenuComponent {
   items: MenuItem[] | undefined;
 
-  ngOnInit() {
-    this.items = programTieredActions;
+  constructor() {
+    this.items = [
+      {
+        label: 'Publish Program',
+        icon: 'publish',
+        command: () => this.onPublishProgram()
+      },
+      {
+        label: 'Edit',
+        icon: 'edit',
+        command: () => this.onEditProgram()
+      },
+      {
+        label: 'Delete',
+        icon: 'delete',
+        command: () => this.onDeleteProgram()
+      }
+    ];
+  }
+
+  onClick(event: any) {
+    console.log(event);
+  }
+
+  onActiveItemChange(event: MenuItem) {
+    console.log(event);
+  }
+
+
+  onPublishProgram() {
+    console.log('Publish Program');
+  }
+
+  onUnpublishProgram() {
+    console.log('Unpublish Program');
+  }
+
+  onEditProgram() {
+    console.log('Edit Program');
+  }
+
+  onDeleteProgram() {
+    console.log('Delete Program');
   }
 }
