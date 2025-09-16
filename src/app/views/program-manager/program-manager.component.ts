@@ -4,11 +4,10 @@ import { HeaderComponent } from '../../components/program-manager/header/header.
 import { CardComponent } from '../../components/card/card.component';
 import { NgFor } from '@angular/common';
 import { programData } from '../../services/programData';
-import { SidebarDefinitionsComponent } from '../../components/sidebar-definitions/sidebar-definitions.component';
 
 @Component({
   selector: 'app-program-manager',
-  imports: [GlobalHeaderComponent, HeaderComponent, CardComponent, NgFor, SidebarDefinitionsComponent],
+  imports: [GlobalHeaderComponent, HeaderComponent, CardComponent, NgFor],
   standalone: true,
   templateUrl: './program-manager.component.html',
   styleUrl: './program-manager.component.css',
@@ -16,4 +15,8 @@ import { SidebarDefinitionsComponent } from '../../components/sidebar-definition
 export class ProgramManagerComponent {
   programData = programData;
   sidebarVisible = false;
+
+  onShowDefinitions() {
+    this.sidebarVisible = true;
+  }
 }
