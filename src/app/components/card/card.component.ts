@@ -8,6 +8,7 @@ import { RouterLink } from '@angular/router';
 import { NgIf } from '@angular/common';
 import { Status } from '../../services/programData';
 import { ProgramTieredMenuComponent } from '../program-manager/program-tiered-menu/program-tiered-menu.component';
+import { TooltipModule } from 'primeng/tooltip';
 
 @Component({
   selector: 'app-card',
@@ -19,6 +20,7 @@ import { ProgramTieredMenuComponent } from '../program-manager/program-tiered-me
     RouterLink,
     NgIf,
     ProgramTieredMenuComponent,
+    TooltipModule
   ],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css',

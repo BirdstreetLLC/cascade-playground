@@ -1,6 +1,6 @@
 <div class="flex flex-col rounded border border-gray-200 bg-white py-4">
   <div class="flex justify-center items-center px-4">
-    <app-pill [label]="status" [pillStyle]="status === statusEnum.Published ? pillStyleEnum.Tertiary : pillStyleEnum.Standard" />
+    <app-pill [label]="status" [pillStyle]="status === statusEnum.Published ? pillStyleEnum.Tertiary : pillStyleEnum.Standard" tooltipPosition="top" [pTooltip]="status === statusEnum.Published ? 'The program has been publised and exceeded the end date' : 'The program is currently active and members are engaging with it'" />
     <div class="flex-1"></div>
     <app-program-tiered-menu [isPublished]="status === statusEnum.Published" />
   </div>
@@ -28,6 +28,7 @@
           ? cascade.cascadeAlias.tertiary
           : cascade.cascadeBrand.greyDark,
     }"
+    tooltipPosition="top" pTooltip="Percentage of members who engaged with this program"
   >
     <div *ngIf="engagementRate > 50">
       <img
@@ -52,22 +53,22 @@
   </div>
 
   <div class="flex justify-center items-center w-full items-start px-4 pt-2">
-    <div class="flex flex-col justify-center items-center">
+    <div class="flex flex-col justify-center items-center" tooltipPosition="top" pTooltip="Total number of members assigned to this program">
       <span class="font-bold">{{ memberList | number }}</span>
       <span class="text-gray-400">Member list</span>
     </div>
     <div class="flex-1"></div>
-    <div class="flex flex-col justify-center items-center">
+    <div class="flex flex-col justify-center items-center" tooltipPosition="top" pTooltip="Total number of members who engaged with this program">
       <span class="font-bold">{{ engaged }}</span>
       <span class="text-gray-400">Engaged</span>
     </div>
     <div class="flex-1"></div>
-    <div class="flex flex-col justify-center items-center">
+    <div class="flex flex-col justify-center items-center" tooltipPosition="top" pTooltip="Total number of members could not receive program messages">
       <span class="font-bold">{{ unableToReach }}</span>
       <span class="text-gray-400">Unable to Reach</span>
     </div>
     <div class="flex-1"></div>
-    <div class="flex flex-col justify-center items-center">
+    <div class="flex flex-col justify-center items-center" tooltipPosition="top" pTooltip="Total number of members who purposefully opted out of the program">
       <span class="font-bold">{{ optedOut }}</span>
       <span class="text-gray-400">Opted Out</span>
     </div>
