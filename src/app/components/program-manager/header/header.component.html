@@ -77,7 +77,7 @@
     </div>
 
     <div *ngIf="isProgram">
-      <app-program-tiered-menu />
+      <app-program-tiered-menu [isPublished]="status === statusEnum.Published" />
     </div>
 
     <div *ngIf="definitions">

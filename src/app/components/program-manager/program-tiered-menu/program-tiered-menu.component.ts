@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TieredMenuModule } from 'primeng/tieredmenu';
 import { programTieredActions } from '../../../services/programTieredActions';
 import { MenuItem } from 'primeng/api';
@@ -12,32 +12,19 @@ import { MatIcon } from '@angular/material/icon';
 })
 export class ProgramTieredMenuComponent {
   items: MenuItem[] | undefined;
+  @Input() isPublished: boolean = false;
 
-  constructor() {
+  ngOnInit() {
     this.items = [
       {
-        label: 'Publish Program',
+        label: this.isPublished ? "Unpublish Program" : 'Publish Program',
         icon: 'publish',
-        command: () => this.onPublishProgram(),
-      },
-      {
-        label: 'Edit',
-        icon: 'edit',
-        command: () => this.onEditProgram(),
-      },
-      {
-        label: 'Delete',
-        icon: 'delete',
-        command: () => this.onDeleteProgram(),
+        command: () => this.isPublished ? this.onUnpublishProgram() : this.onPublishProgram(),
       },
     ];
   }
 
   onClick(event: any) {
-    console.log(event);
-  }
-
-  onActiveItemChange(event: MenuItem) {
     console.log(event);
   }
 
@@ -49,11 +36,5 @@ export class ProgramTieredMenuComponent {
     console.log('Unpublish Program');
   }
 
-  onEditProgram() {
-    console.log('Edit Program');
-  }
 
-  onDeleteProgram() {
-    console.log('Delete Program');
-  }
 }
