@@ -2,7 +2,7 @@
   <div class="flex justify-center items-center px-4">
     <app-pill [label]="status" [pillStyle]="status === statusEnum.Published ? pillStyleEnum.Tertiary : pillStyleEnum.Standard" />
     <div class="flex-1"></div>
-    <app-program-tiered-menu />
+    <app-program-tiered-menu [isPublished]="status === statusEnum.Published" />
   </div>
 
   <div class="flex flex-col mt-1 justify-start w-full items-start px-4">
