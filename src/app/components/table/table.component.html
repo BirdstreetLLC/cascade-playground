@@ -1,28 +1,32 @@
-<p-table [scrollable]="true" scrollDirection="horizontal" styleClass="w-full" [paginator]="true" [rows]="5" [value]="tableData">
+<p-table [scrollable]="true" scrollDirection="horizontal" styleClass="w-full" [paginator]="true" [rows]="10" [value]="tableData">
     <ng-template pTemplate="header">
         <tr>
-            <th ><div>Member ID</div></th>
-            <th >First Name</th>
-            <th >Last Name</th>
-            <th >Age</th>
-            <th >Gender</th>
-            <th >Primary Language</th>
-            <th >Line of Business</th>
-            <th >Primary Language</th>
-            <th >Line of Business</th>
+            <th class="min-w-[150px]"><div>Member ID</div></th>
+            <th class="min-w-[150px]">First Name</th>
+            <th class="min-w-[150px]">Last Name</th>
+            <th class="min-w-[150px]">Age</th>
+            <th class="min-w-[150px]">Gender</th>
+            <th class="min-w-[150px]">Primary Language</th>
+            <th class="min-w-[150px]">Line of Business</th>
+            <th class="min-w-[150px]">State</th>
+            <th class="min-w-[150px]">County</th>
+            <th class="min-w-[150px]">Phone Number</th>
+            <th class="min-w-[150px]">Address</th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-member >
         <tr>
-            <td><div><button [style.color]="cascade.cascadeAlias.primary" class="cursor-pointer">{{ member.member_id ?? '-' }}</button></div></td>
-            <td>{{ member.first_name ?? '-' }}</td>
-            <td>{{ member?.last_name ?? '-' }}</td>
-            <td>{{ member?.age ?? '-' }}</td>
-            <td>{{ member?.gender ?? '-' }}</td>
-            <td>{{ member?.language ?? '-' }}</td>
-            <td>{{ member?.line_of_business ?? '-' }}</td>
-            <td>{{ member?.language ?? '-' }}</td>
-            <td>{{ member?.line_of_business ?? '-' }}</td>
+            <td class="min-w-[150px]"><div><button [style.color]="cascade.cascadeAlias.primary" class="cursor-pointer">{{ member.member_id ?? '-' }}</button></div></td>
+            <td class="min-w-[150px]">{{ member.first_name ?? '-' }}</td>
+            <td class="min-w-[150px]">{{ member?.last_name ?? '-' }}</td>
+            <td class="min-w-[150px]">{{ member?.age ?? '-' }}</td>
+            <td class="min-w-[150px]">{{ member?.gender ?? '-' }}</td>
+            <td class="min-w-[150px]">{{ member?.language ?? '-' }}</td>
+            <td class="min-w-[150px]">{{ member?.line_of_business ?? '-' }}</td>
+            <td class="min-w-[150px]">{{ member?.state ?? '-' }}</td>
+            <td class="min-w-[150px]">{{ member?.county ?? '-' }}</td>
+            <td class="min-w-[150px]">{{ member?.phone_nbr ?? '-' }}</td>
+            <td class="min-w-[150px]">{{ member?.address_1 ?? '-' }}</td>
         </tr>
     </ng-template>
 </p-table>
