@@ -101,6 +101,7 @@
       *ngIf="memberList"
       label="Members in the Outreach"
       [data]="memberList"
+      [tooltip]="getDefinition(tooltipEnum.MemberList)"
     />
     <div class="flex-1"></div>
     <app-summary-card
@@ -110,6 +111,7 @@
       label="Did Not Engage"
       [data]="didNotEngage"
       [onClick]="onClick"
+      [tooltip]="getDefinition(tooltipEnum.DidNotEngage)"
     />
     <div class="flex-1"></div>
     <app-summary-card
@@ -119,7 +121,7 @@
       label="Engaged"
       [data]="engaged"
       [onClick]="onClick"
-  
+      [tooltip]="getDefinition(tooltipEnum.Engaged)"
     />
     <div class="flex-1"></div>
     <app-summary-card
@@ -127,6 +129,7 @@
       *ngIf="engagementRate"
       label="Engaged Rate"
       [data]="engagementRate"
+      [tooltip]="getDefinition(tooltipEnum.EngagementRate)"
     />
     <div class="flex-1"></div>
     <app-summary-card
@@ -136,6 +139,7 @@
       label="Opt Out Rate"
       [data]="optedOut"
       [onClick]="onClick"
+      [tooltip]="getDefinition(tooltipEnum.OptOutRate)"
     />
   </div>
 </div>

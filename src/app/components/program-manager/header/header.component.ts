@@ -9,6 +9,9 @@ import { SummaryCardComponent } from '../../summary-card/summary-card.component'
 import { DataType } from '../../summary-card/summary-card.component';
 import { Status } from '../../../services/programData';
 import { ProgramTieredMenuComponent } from '../program-tiered-menu/program-tiered-menu.component';
+import { TooltipModule } from 'primeng/tooltip';
+import {tooltipDefinitions, TooltipDefinitions} from '../../../services/tooltipDefinitions';
+import { getDefinition } from '../../../utils/getDefinition';
 
 @Component({
   selector: 'app-header',
@@ -20,6 +23,7 @@ import { ProgramTieredMenuComponent } from '../program-tiered-menu/program-tiere
     MatIcon,
     SummaryCardComponent,
     ProgramTieredMenuComponent,
+    TooltipModule
   ],
   templateUrl: './header.component.html',
   standalone: true,
@@ -56,4 +60,8 @@ export class HeaderComponent {
   url = window.location.href;
 
   isProgram = this.url.includes('program/');
+
+  tooltipDefinitions = tooltipDefinitions;
+  tooltipEnum = TooltipDefinitions;
+  getDefinition = getDefinition
 }

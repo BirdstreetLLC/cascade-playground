@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { cascadeFigmaVariables } from '../../cascade';
 import { NgIf } from '@angular/common';
+import { TooltipModule } from 'primeng/tooltip';
 
 export enum DataType {
   Number = 'Number',
@@ -9,7 +10,7 @@ export enum DataType {
 }
 @Component({
   selector: 'app-summary-card',
-  imports: [NgIf],
+  imports: [NgIf, TooltipModule],
   templateUrl: './summary-card.component.html',
   styleUrl: './summary-card.component.css',
 })
@@ -19,6 +20,7 @@ export class SummaryCardComponent {
   @Input() link: string = '';
   @Input() dataType: DataType = DataType.Number;
   @Input() onClick: any = () => {};
+  @Input() tooltip: string = '';
 
   cascade = cascadeFigmaVariables;
   dataTypeEnum = DataType;
