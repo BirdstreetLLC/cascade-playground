@@ -8,20 +8,20 @@
   </div>
   <div class="w-full flex justify-center items-center bg-white">
     <div class="flex flex-1 justify-end items-center max-w-[1280px] p-2 gap-4">
-      <div class="flex gap-2 items-center justify-center">
-        <img
+      <div class="flex items-center justify-center">
+        <button class="cursor-pointer" (click)="opDate.toggle()" (ngModel)="(date)"><img
           src="https://res.cloudinary.com/dbrkk86kt/image/upload/v1758229728/mpulse/program-manager-prototype/calendar_aymdmc.png"
           width="16"
           height="16"
-        />
-        <p-calendar
+        /></button>
+        <p-calendar #opDate
           [inputStyle]="{
             border: 'none',
             cursor: 'pointer',
             textAlign: 'left',
           }"
           [defaultDate]="todayDate"
-          placeholder="Filter Date Range"
+          placeholder="Sorted by most recent"
           (ngModel)="(date)"
           selectionMode="range"
           [readonlyInput]="true"
