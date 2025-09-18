@@ -4,7 +4,7 @@ import { HeaderComponent } from '../../components/program-manager/header/header.
 import { CardComponent } from '../../components/card/card.component';
 import { NgFor } from '@angular/common';
 import { programData } from '../../services/programData';
-import { CalendarModule } from 'primeng/calendar';
+import { DatePickerModule } from 'primeng/datepicker';
 import { PopoverModule } from 'primeng/popover';
 import { Listbox } from 'primeng/listbox';
 import { MatIcon } from '@angular/material/icon';
@@ -17,7 +17,7 @@ import { cascadeFigmaVariables } from '../../cascade';
     HeaderComponent,
     CardComponent,
     NgFor,
-    CalendarModule,
+    DatePickerModule,
     PopoverModule,
     Listbox,
     MatIcon,
@@ -38,6 +38,8 @@ export class ProgramManagerComponent {
   programs!: any[];
   selectedPrograms!: any;
   cascade = cascadeFigmaVariables;
+  selectedProgramFilter: string = "";
+  selectedLaunchDateFilter: string = "";
 
   ngOnInit() {
     let today = new Date();
@@ -68,6 +70,14 @@ export class ProgramManagerComponent {
       { name: 'Completed', code: 'IST' },
       { name: 'Canceled', code: 'PRS' },
     ];
+  }
+
+  onSelectProgramFilter(event: any) {
+    this.selectedProgramFilter = event.option.name;
+  }
+
+  onSelectLaunchDateFilter(event: any) {
+    this.selectedLaunchDateFilter = event.option.name;
   }
 
   onShowDefinitions() {

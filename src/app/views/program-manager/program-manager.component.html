@@ -14,7 +14,7 @@
           width="16"
           height="16"
         /></button>
-        <p-calendar #opDate
+        <p-datepicker #opDate
           [inputStyle]="{
             border: 'none',
             shadow: 'none',
@@ -34,7 +34,7 @@
           (ngModel)="(date)"
           selectionMode="range"
           [readonlyInput]="true"
-        ></p-calendar>
+        ></p-datepicker>
       </div>
 
       <button
@@ -46,7 +46,8 @@
           width="16"
           height="16"
         />
-        Launch date
+       
+        {{selectedLaunchDateFilter ? selectedLaunchDateFilter : ' Launch date'}}
       </button>
       <p-popover #op>
         <div class="w-[250px]">
@@ -54,6 +55,7 @@
             [options]="launchDate"
             (click)="op.toggle($event)"
             (ngModel)="(selectedLaunchDate)"
+            (onClick)="onSelectLaunchDateFilter($event)"
             optionLabel="name"
             [style]="{ border: 'none', padding: '0', margin: '0' }"
           />
@@ -69,7 +71,7 @@
           width="16"
           height="16"
         />
-        All programs
+         {{selectedProgramFilter ? selectedProgramFilter : 'All programs'}}
       </button>
       <p-popover [style]="{ padding: '0px' }" #opPrograms>
         <div class="w-[200px]">
@@ -77,6 +79,7 @@
             [options]="programs"
             (click)="opPrograms.toggle($event)"
             (ngModel)="(selectedPrograms)"
+            (onClick)="onSelectProgramFilter($event)"
             optionLabel="name"
             [style]="{ border: 'none', padding: '0px', margin: '0px' }"
           />
