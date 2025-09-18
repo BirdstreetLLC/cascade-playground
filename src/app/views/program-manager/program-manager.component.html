@@ -11,18 +11,22 @@
   <div class="w-full flex justify-center items-center bg-white">
     <div class="flex flex-1 justify-end items-center max-w-[1280px] p-2 gap-4">
       <div><p-calendar [inputStyle]="{ border: 'none', cursor: 'pointer', width: '250px', textAlign: 'right'}" [defaultDate]="todayDate" placeholder="Filter Date Range" (ngModel)="date" selectionMode="range" [readonlyInput]="true"></p-calendar></div>
-      <button (click)="op.toggle($event)">
+      <button class="cursor-pointer" (click)="op.toggle($event)">
         Launch Date
       </button>
       <p-popover #op>
-        <p-listbox [options]="cities" (click)="op.toggle($event)" (ngModel)="selectedCity" optionLabel="name" class="w-full md:w-56" />
+         <div class="w-[200px]">
+             <p-listbox [options]="cities" (click)="op.toggle($event)" (ngModel)="selectedCity" optionLabel="name" class="w-full md:w-56" />
+         </div>
       </p-popover>
      
-      <button (click)="op.toggle($event)">
+      <button class="cursor-pointer" (click)="opPrograms.toggle($event)">
         All Programs
       </button>
-      <p-popover #op>
-        <p-listbox [options]="cities" (click)="op.toggle($event)" (ngModel)="selectedCity" optionLabel="name" class="w-full md:w-56" />
+      <p-popover #opPrograms>
+          <div class="w-[200px]">
+              <p-listbox  [options]="cities" (click)="opPrograms.toggle($event)" (ngModel)="selectedCity" optionLabel="name" />
+          </div>
       </p-popover>
     </div>
   </div>

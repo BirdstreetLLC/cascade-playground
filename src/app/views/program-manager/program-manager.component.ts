@@ -8,10 +8,6 @@ import { CalendarModule } from 'primeng/calendar';
 import { PopoverModule } from 'primeng/popover';
 import { Listbox } from 'primeng/listbox';
 
-interface City {
-    name: string,
-    code: string
-}
 
 @Component({
   selector: 'app-program-manager',
@@ -27,8 +23,8 @@ export class ProgramManagerComponent {
   minDate: Date | undefined;
   maxDate: Date | undefined;
   todayDate = new Date();
-  cities!: City[];
-  selectedCity!: City;
+  cities!: any[];
+  selectedCity!: any;
 
   ngOnInit() {
         let today = new Date();
