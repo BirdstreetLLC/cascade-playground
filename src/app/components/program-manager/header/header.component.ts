@@ -50,6 +50,7 @@ export class HeaderComponent {
   @Input() didNotEngage: number = 0;
   @Input() fullWidth: boolean = false;
   @Input() onClick: any = () => {};
+  @Input() onViewMembers: any = () => {};
 
   booleanAttribute = this.definitions;
   statusEnum = Status;

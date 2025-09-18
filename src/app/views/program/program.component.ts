@@ -62,10 +62,12 @@ export class ProgramComponent implements OnInit {
 
   onActiveItemChange(event: MenuItem): void {
     this.activeItem = event;
-    console.log('click');
+    console.log(this.activeItem)
   }
 
-  public handleOnClick(): void {
-    this.onActiveItemChange(this.items[1]);
+  onViewMembers(): void {
+    this.activeItem = { label: 'Member List' }
+    console.log(this.activeItem)
   }
+
 }

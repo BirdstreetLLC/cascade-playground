@@ -110,7 +110,7 @@
       *ngIf="didNotEngage"
       label="Did Not Engage"
       [data]="didNotEngage"
-      [onClick]="onClick"
+      (onClick)="onViewMembers()"
       [tooltip]="getDefinition(tooltipEnum.DidNotEngage)"
     />
     <div class="flex-1"></div>
@@ -120,7 +120,7 @@
       *ngIf="engaged"
       label="Engaged"
       [data]="engaged"
-      [onClick]="onClick"
+      (onClick)="onViewMembers()"
       [tooltip]="getDefinition(tooltipEnum.Engaged)"
     />
     <div class="flex-1"></div>
@@ -138,7 +138,7 @@
       *ngIf="optedOut"
       label="Opt Out Rate"
       [data]="optedOut"
-      [onClick]="onClick"
+      (onClick)="onViewMembers()"
       [tooltip]="getDefinition(tooltipEnum.OptOutRate)"
     />
   </div>
