@@ -17,11 +17,20 @@
         <p-calendar #opDate
           [inputStyle]="{
             border: 'none',
+            shadow: 'none',
             cursor: 'pointer',
             textAlign: 'left',
+            width: '205px',
+            dropShadow: 'none',
+            padding: '0',
+            paddingRight: '8px',
+            paddingLeft: '8px',
+            outline: 'none',
+            boxShadow: 'none',
           }"
+          [autofocus]="false"
           [defaultDate]="todayDate"
-          placeholder="Sorted by most recent"
+          placeholder="Sorted programs by recent"
           (ngModel)="(date)"
           selectionMode="range"
           [readonlyInput]="true"
