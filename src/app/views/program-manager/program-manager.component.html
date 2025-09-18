@@ -10,7 +10,7 @@
   </div>
   <div class="w-full flex justify-center items-center bg-white">
     <div class="flex flex-1 justify-end items-center max-w-[1280px] p-2 gap-4">
-      <div><p-calendar [defaultDate]="todayDate" placeholder="Select Date Range" (ngModel)="date" selectionMode="range" [readonlyInput]="true"></p-calendar></div>
+      <div><p-calendar [inputStyle]="{ border: 'none', cursor: 'pointer', width: '250px', textAlign: 'right'}" [defaultDate]="todayDate" placeholder="Filter Date Range" (ngModel)="date" selectionMode="range" [readonlyInput]="true"></p-calendar></div>
       <button (click)="op.toggle($event)">
         Launch Date
       </button>
