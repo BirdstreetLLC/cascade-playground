@@ -9,7 +9,10 @@ import { NgIf } from '@angular/common';
 import { Status } from '../../services/programData';
 import { ProgramTieredMenuComponent } from '../program-manager/program-tiered-menu/program-tiered-menu.component';
 import { TooltipModule } from 'primeng/tooltip';
-import {tooltipDefinitions, TooltipDefinitions} from '../../services/tooltipDefinitions';
+import {
+  tooltipDefinitions,
+  TooltipDefinitions,
+} from '../../services/tooltipDefinitions';
 import { getDefinition } from '../../utils/getDefinition';
 
 @Component({
@@ -22,7 +25,7 @@ import { getDefinition } from '../../utils/getDefinition';
     RouterLink,
     NgIf,
     ProgramTieredMenuComponent,
-    TooltipModule
+    TooltipModule,
   ],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css',
@@ -43,8 +46,7 @@ export class CardComponent {
   cascade = cascadeFigmaVariables;
   pillStyleEnum = PillStyles;
   statusEnum = Status;
-  tooltipDefinitions = tooltipDefinitions
-  tooltipEnum = TooltipDefinitions
-  getDefinition = getDefinition
-
+  tooltipDefinitions = tooltipDefinitions;
+  tooltipEnum = TooltipDefinitions;
+  getDefinition = getDefinition;
 }

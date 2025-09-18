@@ -17,9 +17,12 @@ export class ProgramTieredMenuComponent {
   ngOnInit() {
     this.items = [
       {
-        label: this.isPublished ? "Unpublish Program" : 'Publish Program',
+        label: this.isPublished ? 'Unpublish Program' : 'Publish Program',
         icon: 'publish',
-        command: () => this.isPublished ? this.onUnpublishProgram() : this.onPublishProgram(),
+        command: () =>
+          this.isPublished
+            ? this.onUnpublishProgram()
+            : this.onPublishProgram(),
       },
     ];
   }
@@ -35,6 +38,4 @@ export class ProgramTieredMenuComponent {
   onUnpublishProgram() {
     console.log('Unpublish Program');
   }
-
-
 }

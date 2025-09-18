@@ -1,6 +1,4 @@
-<div
-  class="flex flex-col items-center justify-start bg-[#F9FAFF] w-full"
->
+<div class="flex flex-col items-center justify-start bg-[#F9FAFF] w-full">
   <div class="w-full"><app-global-header /></div>
   <div class="w-full">
     <app-header
@@ -10,23 +8,69 @@
   </div>
   <div class="w-full flex justify-center items-center bg-white">
     <div class="flex flex-1 justify-end items-center max-w-[1280px] p-2 gap-4">
-      <div><p-calendar [inputStyle]="{ border: 'none', cursor: 'pointer', width: '250px', textAlign: 'right'}" [defaultDate]="todayDate" placeholder="Filter Date Range" (ngModel)="date" selectionMode="range" [readonlyInput]="true"></p-calendar></div>
-      <button class="cursor-pointer" (click)="op.toggle($event)">
+      <div class="flex gap-2 items-center justify-center">
+        <img
+          src="https://res.cloudinary.com/dbrkk86kt/image/upload/v1758229728/mpulse/program-manager-prototype/calendar_aymdmc.png"
+          width="16"
+          height="16"
+        />
+        <p-calendar
+          [inputStyle]="{
+            border: 'none',
+            cursor: 'pointer',
+            textAlign: 'left',
+          }"
+          [defaultDate]="todayDate"
+          placeholder="Filter Date Range"
+          (ngModel)="(date)"
+          selectionMode="range"
+          [readonlyInput]="true"
+        ></p-calendar>
+      </div>
+
+      <button
+        class="cursor-pointer flex gap-2 items-center justify-center"
+        (click)="op.toggle($event)"
+      >
+        <img
+          src="https://res.cloudinary.com/dbrkk86kt/image/upload/v1758229723/mpulse/program-manager-prototype/filter1_mnfcft.png"
+          width="16"
+          height="16"
+        />
         Launch Date
       </button>
       <p-popover #op>
-         <div class="w-[200px]">
-             <p-listbox [options]="cities" (click)="op.toggle($event)" (ngModel)="selectedCity" optionLabel="name" class="w-full md:w-56" />
-         </div>
+        <div class="w-[200px]">
+          <p-listbox
+            [options]="cities"
+            (click)="op.toggle($event)"
+            (ngModel)="(selectedCity)"
+            optionLabel="name"
+            class="w-full md:w-56"
+          />
+        </div>
       </p-popover>
-     
-      <button class="cursor-pointer" (click)="opPrograms.toggle($event)">
+
+      <button
+        class="cursor-pointer flex gap-2 items-center justify-center"
+        (click)="opPrograms.toggle($event)"
+      >
+        <img
+          src="https://res.cloudinary.com/dbrkk86kt/image/upload/v1758229728/mpulse/program-manager-prototype/Vector_tpzztt.png"
+          width="16"
+          height="16"
+        />
         All Programs
       </button>
       <p-popover #opPrograms>
-          <div class="w-[200px]">
-              <p-listbox  [options]="cities" (click)="opPrograms.toggle($event)" (ngModel)="selectedCity" optionLabel="name" />
-          </div>
+        <div class="w-[200px]">
+          <p-listbox
+            [options]="cities"
+            (click)="opPrograms.toggle($event)"
+            (ngModel)="(selectedCity)"
+            optionLabel="name"
+          />
+        </div>
       </p-popover>
     </div>
   </div>

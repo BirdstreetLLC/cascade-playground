@@ -10,7 +10,10 @@ import { DataType } from '../../summary-card/summary-card.component';
 import { Status } from '../../../services/programData';
 import { ProgramTieredMenuComponent } from '../program-tiered-menu/program-tiered-menu.component';
 import { TooltipModule } from 'primeng/tooltip';
-import {tooltipDefinitions, TooltipDefinitions} from '../../../services/tooltipDefinitions';
+import {
+  tooltipDefinitions,
+  TooltipDefinitions,
+} from '../../../services/tooltipDefinitions';
 import { getDefinition } from '../../../utils/getDefinition';
 
 @Component({
@@ -23,7 +26,7 @@ import { getDefinition } from '../../../utils/getDefinition';
     MatIcon,
     SummaryCardComponent,
     ProgramTieredMenuComponent,
-    TooltipModule
+    TooltipModule,
   ],
   templateUrl: './header.component.html',
   standalone: true,
@@ -64,5 +67,5 @@ export class HeaderComponent {
 
   tooltipDefinitions = tooltipDefinitions;
   tooltipEnum = TooltipDefinitions;
-  getDefinition = getDefinition
+  getDefinition = getDefinition;
 }

@@ -24,8 +24,8 @@ import { MatIcon } from '@angular/material/icon';
     NgIf,
     TableComponent,
     Button,
-    MatIcon
-],
+    MatIcon,
+  ],
   templateUrl: './program.component.html',
   styleUrls: ['./program.component.css'],
 })
@@ -62,12 +62,11 @@ export class ProgramComponent implements OnInit {
 
   onActiveItemChange(event: MenuItem): void {
     this.activeItem = event;
-    console.log(this.activeItem)
+    console.log(this.activeItem);
   }
 
   onViewMembers(): void {
-    this.activeItem = { label: 'Member List' }
-    console.log(this.activeItem)
+    this.activeItem = { label: 'Member List' };
+    console.log(this.activeItem);
   }
-
 }
