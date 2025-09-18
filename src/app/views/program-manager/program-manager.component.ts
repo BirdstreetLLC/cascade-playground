@@ -33,8 +33,10 @@ export class ProgramManagerComponent {
   minDate: Date | undefined;
   maxDate: Date | undefined;
   todayDate = new Date();
-  cities!: any[];
-  selectedCity!: any;
+  launchDate!: any[];
+  selectedLaunchDate!: any;
+  programs!: any[];
+  selectedPrograms!: any;
   cascade = cascadeFigmaVariables;
 
   ngOnInit() {
@@ -51,12 +53,20 @@ export class ProgramManagerComponent {
     this.maxDate = new Date();
     this.maxDate.setMonth(nextMonth);
     this.maxDate.setFullYear(nextYear);
-    this.cities = [
-      { name: 'New York', code: 'NY' },
-      { name: 'Rome', code: 'RM' },
-      { name: 'London', code: 'LDN' },
-      { name: 'Istanbul', code: 'IST' },
-      { name: 'Paris', code: 'PRS' },
+    this.launchDate = [
+      { name: 'Launch Date (Decending)', code: 'NY' },
+      { name: 'Launch Date (Ascending)', code: 'RM' },
+        { name: 'End Date (Decending)', code: 'NY' },
+      { name: 'End Date (Ascending)', code: 'RM' },
+       { name: 'Program Name (A - Z)', code: 'NY' },
+       { name: 'Program Name (Z - A)', code: 'NY' },
+    ];
+    this.programs = [
+      { name: 'Preparing', code: 'NY' },
+      { name: 'Building', code: 'RM' },
+      { name: 'Launched', code: 'LDN' },
+      { name: 'Completed', code: 'IST' },
+      { name: 'Canceled', code: 'PRS' },
     ];
   }
 

@@ -6,8 +6,8 @@
       subtitle="View, Analyze and Measure your Member Outreach Programs"
     />
   </div>
-  <div class="w-full flex justify-center items-center bg-white">
-    <div class="flex flex-1 justify-end items-center max-w-[1280px] p-2 gap-4">
+  <div class="w-full flex justify-center items-center bg-white border-b border-gray-200">
+    <div class="flex flex-1 justify-end items-center max-w-[1280px] py-2 gap-4">
       <div class="flex items-center justify-center">
         <button class="cursor-pointer" (click)="opDate.toggle()" (ngModel)="(date)"><img
           src="https://res.cloudinary.com/dbrkk86kt/image/upload/v1758229728/mpulse/program-manager-prototype/calendar_aymdmc.png"
@@ -46,16 +46,16 @@
           width="16"
           height="16"
         />
-        Launch Date
+        Launch date
       </button>
       <p-popover #op>
-        <div class="w-[200px]">
+        <div class="w-[250px]">
           <p-listbox
-            [options]="cities"
+            [options]="launchDate"
             (click)="op.toggle($event)"
-            (ngModel)="(selectedCity)"
+            (ngModel)="(selectedLaunchDate)"
             optionLabel="name"
-            class="w-full md:w-56"
+            [style]="{ border: 'none', padding: '0', margin: '0' }"
           />
         </div>
       </p-popover>
@@ -69,15 +69,16 @@
           width="16"
           height="16"
         />
-        All Programs
+        All programs
       </button>
-      <p-popover #opPrograms>
+      <p-popover [style]="{ padding: '0px' }" #opPrograms>
         <div class="w-[200px]">
           <p-listbox
-            [options]="cities"
+            [options]="programs"
             (click)="opPrograms.toggle($event)"
-            (ngModel)="(selectedCity)"
+            (ngModel)="(selectedPrograms)"
             optionLabel="name"
+            [style]="{ border: 'none', padding: '0px', margin: '0px' }"
           />
         </div>
       </p-popover>
