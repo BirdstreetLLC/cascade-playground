@@ -54,6 +54,8 @@ export class HeaderComponent {
   @Input() fullWidth: boolean = false;
   @Input() onClick: any = () => {};
   @Input() onViewMembers: any = () => {};
+  @Input() engagedOutcomeRate: number = 0;
+  @Input() unengagedOutcomeRate: number = 0;
 
   booleanAttribute = this.definitions;
   statusEnum = Status;

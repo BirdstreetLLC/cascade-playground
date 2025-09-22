@@ -4,6 +4,8 @@ export enum TooltipDefinitions {
   UnableToReach = 'Unable to Reach',
   OptOutRate = 'Opt Out Rate',
   EngagementRate = 'Engagement Rate',
+  EngagementOutcomeRate = 'Engagement Outcome Rate',
+  unengagementOutcomeRate = 'Unengagement Outcome Rate',
   DidNotEngage = 'Did Not Engage',
 }
 
@@ -31,5 +33,13 @@ export const tooltipDefinitions = [
   {
     key: TooltipDefinitions.DidNotEngage,
     value: 'Total number of members who did not engage with this program',
+  },
+  {
+    key: TooltipDefinitions.EngagementOutcomeRate,
+    value: 'Total percentage of members who engaged with this program',
+  },
+  {
+    key: TooltipDefinitions.unengagementOutcomeRate,
+    value: 'Total percentage of members who did not engage with this program',
   },
 ];

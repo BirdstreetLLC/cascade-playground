@@ -103,7 +103,7 @@
       [data]="memberList"
       [tooltip]="getDefinition(tooltipEnum.MemberList)"
     />
-    <div class="flex-1"></div>
+    <div *ngIf="memberList" class="flex-1"></div>
     <app-summary-card
       link="View Members"
       [dataType]="dataTypeEnum.Number"
@@ -113,7 +113,7 @@
       (onClick)="onViewMembers()"
       [tooltip]="getDefinition(tooltipEnum.Engaged)"
     />
-    <div class="flex-1"></div>
+    <div *ngIf="engaged" class="flex-1"></div>
     <app-summary-card
       link="View Members"
       [dataType]="dataTypeEnum.Number"
@@ -123,7 +123,16 @@
       (onClick)="onViewMembers()"
       [tooltip]="getDefinition(tooltipEnum.DidNotEngage)"
     />
-    <div class="flex-1"></div>
+    <div *ngIf="didNotEngage" class="flex-1"></div>
+    <app-summary-card
+      [dataType]="dataTypeEnum.Percentage"
+      *ngIf="unengagedOutcomeRate"
+      label="Unengaged Outcome Rate"
+      [data]="unengagedOutcomeRate"
+      (onClick)="onViewMembers()"
+      [tooltip]="getDefinition(tooltipEnum.unengagementOutcomeRate)"
+    />
+    <div *ngIf="unengagedOutcomeRate" class="flex-1"></div>
     <app-summary-card
       [dataType]="dataTypeEnum.Percentage"
       *ngIf="engagementRate"
@@ -131,7 +140,16 @@
       [data]="engagementRate"
       [tooltip]="getDefinition(tooltipEnum.EngagementRate)"
     />
-    <div class="flex-1"></div>
+    <div *ngIf="engagementRate" class="flex-1"></div>
+    <app-summary-card
+      [dataType]="dataTypeEnum.Percentage"
+      *ngIf="engagedOutcomeRate"
+      label="Engaged Outcome Rate"
+      [data]="engagedOutcomeRate"
+      (onClick)="onViewMembers()"
+      [tooltip]="getDefinition(tooltipEnum.EngagementOutcomeRate)"
+    />
+    <div *ngIf="engagedOutcomeRate" class="flex-1"></div>
     <app-summary-card
       link="View Members"
       [dataType]="dataTypeEnum.Negative"

@@ -66,6 +66,8 @@ export const programData = [
     engagementRate: 10.77,
     engagementRateTitle: 'Engagement Rate',
     engagementRateSubtitle: 'Your program is ahead of benchmarks!',
+    engagedOutcomeRate: 8.37,
+    unengagedOutcomeRate: 1.5,
     memberList: 8547,
     engaged: 921,
     didNotEngage: 1.2,
