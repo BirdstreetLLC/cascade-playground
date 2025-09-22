@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ChartModule } from 'primeng/chart';
 
 @Component({
@@ -10,17 +10,15 @@ import { ChartModule } from 'primeng/chart';
 export class ChartComponent {
   basicData: any;
   basicOptions: any;
+  @Input() data: any = [];
+  @Input() keys: any = {};
 
   ngOnInit() {
     const documentStyle = getComputedStyle(document.documentElement);
     const textColor = documentStyle.getPropertyValue('--text-color');
-    const textColorSecondary = documentStyle.getPropertyValue(
-      '--text-color-secondary',
-    );
-    const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
 
-    const chartKeys = ['Members in the Outreach', 'Engaged', 'Unengaged', 'Q4'];
-    const dataValues = [540, 325, 702, 620];
+    const chartKeys = [...this.keys];
+    const dataValues = [...this.data];
     const backgroundColors = [
       'rgba(41, 76, 246, 1)',
       'rgba(151, 115, 238, 1)',
@@ -39,7 +37,14 @@ export class ChartComponent {
       })),
     };
 
+    console.log(this.basicData)
+
     this.basicOptions = {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      },
       plugins: {
         legend: {
           position: 'bottom',
@@ -48,28 +53,7 @@ export class ChartComponent {
           },
         },
       },
-      scales: {
-        y: {
-          beginAtZero: true,
-          ticks: {
-            color: textColorSecondary,
-          },
-          grid: {
-            color: surfaceBorder,
-            drawBorder: false,
-          },
-
-        },
-        x: {
-          ticks: {
-            color: textColorSecondary,
-          },
-          grid: {
-            color: surfaceBorder,
-            drawBorder: false,
-          },
-        },
-      },
+      
     };
   }
 }

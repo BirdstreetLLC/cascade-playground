@@ -40,7 +40,8 @@ export class ProgramComponent implements OnInit {
   cascade = cascadeFigmaVariables;
   programManagerScreen = programManagerPrototypeImg;
   memberList = memberData?.rows ?? [];
-
+  chartData: any[] = [];
+  chartKeys: any[] = [];
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
@@ -60,6 +61,12 @@ export class ProgramComponent implements OnInit {
         this.currentProgram = foundProgram;
       }
     }
+    this.chartData = [
+      this.currentProgram.memberList,
+      this.currentProgram.engaged,
+      this.currentProgram.memberList - this.currentProgram.engaged,
+    ];
+    this.chartKeys = ['Member List', 'Engaged', 'Unengaged'];
   }
 
   onActiveItemChange(event: MenuItem): void {

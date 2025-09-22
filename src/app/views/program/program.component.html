@@ -51,11 +51,11 @@
            <app-table *ngIf="activeItem?.label === 'Member List'" [tableData]="memberList" />    
            <div *ngIf="activeItem?.label === 'Overview'">
              <h2 class="text-xl mb-4 font-regular text-gray-600">Engagement &amp; Impact Overview</h2>
-              <app-chart />
+              <app-chart [data]="chartData" [keys]="chartKeys" />
            </div>
             <div *ngIf="activeItem?.label === 'Insights'">
               <h2 class="text-xl mb-4 font-regular text-gray-600">Engagement Overview</h2>
-              <app-chart />
+              <app-chart [data]="chartData" [keys]="chartKeys" />
            </div>
         </div>
       </div>
