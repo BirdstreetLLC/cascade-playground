@@ -63,6 +63,7 @@
         label="Tracked Outcome"
         [value]="trackedOutcome"
         [isClickable]="true"
+        (labelClicked)="onTrackedOutcome.emit()"
       />
     </div>
 

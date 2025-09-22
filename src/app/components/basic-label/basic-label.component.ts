@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { cascadeFigmaVariables } from '../../cascade';
 import { NgIf } from '@angular/common';
 import { MatIcon } from '@angular/material/icon';
@@ -13,8 +13,11 @@ export class BasicLabelComponent {
   cascade = cascadeFigmaVariables;
   @Input() label: string = '';
   @Input() value: string = '';
-  @Input() onClick: () => void = () => {};
   @Input() isClickable: boolean = false;
+  /**
+   * Emits an event when the label is clicked.
+   */
+  @Output() public readonly labelClicked = new EventEmitter<void>();
 
   valueIsArray(value: any) {
     return Array.isArray(value) ? value.join(', ') : value;

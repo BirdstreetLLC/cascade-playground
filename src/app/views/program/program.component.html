@@ -21,6 +21,7 @@
     dpiDataOverviewUrl="Data Overview"
     [status]="currentProgram.status"
     (onViewMembers)="onViewMembers()"
+    (onTrackedOutcome)="showDialog()"
   />
   <div class="w-full flex justify-center items-center bg-white border-b border-gray-200">
     <div class="w-[1280px] flex justify-center items-center">
@@ -62,3 +63,7 @@
     </div>
   </div>
 </div>
+
+<p-dialog header="Edit Profile" [modal]="true" [(visible)]="visible" [style]="{ width: '25rem' }">
+    Dialog
+</p-dialog>

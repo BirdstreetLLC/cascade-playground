@@ -14,6 +14,7 @@ import { memberData } from '../../services/memberData';
 import { Button } from 'primeng/button';
 import { MatIcon } from '@angular/material/icon';
 import { ChartComponent } from '../../components/chart/chart.component';
+import { DialogModule } from 'primeng/dialog';
 
 @Component({
   selector: 'app-program',
@@ -25,6 +26,7 @@ import { ChartComponent } from '../../components/chart/chart.component';
     ButtonModule,
     NgIf,
     TableComponent,
+    DialogModule,
     Button,
     MatIcon,
   ],
@@ -42,6 +44,8 @@ export class ProgramComponent implements OnInit {
   memberList = memberData?.rows ?? [];
   chartData: any[] = [];
   chartKeys: any[] = [];
+  visible: boolean = false;
+
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
@@ -71,11 +75,13 @@ export class ProgramComponent implements OnInit {
 
   onActiveItemChange(event: MenuItem): void {
     this.activeItem = event;
-    console.log(this.activeItem);
   }
 
   onViewMembers(): void {
     this.activeItem = { label: 'Member List' };
-    console.log(this.activeItem);
+  }
+  showDialog() {
+    this.visible = true;
+    console.log('clicked');
   }
 }

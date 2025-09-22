@@ -9,7 +9,7 @@
     >{{ valueIsArray(value) }}</span
   >
   <button
-    (click)="onClick()"
+    (click)="labelClicked.emit()"
     class="cursor-pointer flex justify-start items-start gap-1"
     *ngIf="isClickable"
   >

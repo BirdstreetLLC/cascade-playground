@@ -34,27 +34,26 @@ export class ChartComponent {
           label: chartKeys[0],
           data: dataValues,
           backgroundColor: backgroundColors,
-          borderWidth: 0
-        }
-      ]
+          borderWidth: 0,
+        },
+      ],
     };
 
     this.basicOptions = {
       categoryPercentage: 1,
-          barPercentage: 1,
-          barThickness: 32,
+      barPercentage: 1,
+      barThickness: 32,
       scales: {
         y: {
-          beginAtZero: true
+          beginAtZero: true,
         },
       },
       plugins: {
         legend: {
           //do not show legend
-          display: false
+          display: false,
         },
       },
-      
     };
   }
 }

@@ -1,4 +1,4 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NgIf } from '@angular/common';
 import { cascadeFigmaVariables } from '../../../cascade';
 import { Button } from 'primeng/button';
@@ -56,6 +56,8 @@ export class HeaderComponent {
   @Input() onViewMembers: any = () => {};
   @Input() engagedOutcomeRate: number = 0;
   @Input() unengagedOutcomeRate: number = 0;
+  // @Input() onTrackedOutcome: any = () => {};
+  @Output() public readonly onTrackedOutcome = new EventEmitter<void>();
 
   booleanAttribute = this.definitions;
   statusEnum = Status;
