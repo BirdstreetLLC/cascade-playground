@@ -29,28 +29,29 @@ export class ChartComponent {
 
     this.basicData = {
       labels: chartKeys,
-      datasets: chartKeys.map((key, index) => ({
-        label: key,
-        data: [dataValues[index]],
-        backgroundColor: [backgroundColors[index]],
-        borderWidth: 0,
-      })),
+      datasets: [
+        {
+          label: chartKeys[0],
+          data: dataValues,
+          backgroundColor: backgroundColors,
+          borderWidth: 0
+        }
+      ]
     };
 
-    console.log(this.basicData)
-
     this.basicOptions = {
+      categoryPercentage: 1,
+          barPercentage: 1,
+          barThickness: 32,
       scales: {
         y: {
           beginAtZero: true
-        }
+        },
       },
       plugins: {
         legend: {
-          position: 'bottom',
-          labels: {
-            color: textColor,
-          },
+          //do not show legend
+          display: false
         },
       },
       
