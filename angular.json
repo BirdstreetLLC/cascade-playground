@@ -25,7 +25,9 @@
               }
             ],
             "styles": ["src/custom-theme.scss", "src/styles.css"],
-            "scripts": [],
+            "scripts": [
+              
+            ],
             "outputMode": "static",
             "ssr": {
               "entry": "src/server.ts"
@@ -82,7 +84,9 @@
               }
             ],
             "styles": ["src/styles.css"],
-            "scripts": []
+            "scripts": [
+             
+            ]
           }
         }
       }

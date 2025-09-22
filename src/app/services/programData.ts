@@ -20,8 +20,7 @@ export const programData = [
     trackedOutcome:
       'Breast Cancer Screening within 3 months following outreach',
     title: 'Breast Cancer Screening',
-    description:
-      'Closing gaps in care for breast cancer screening',
+    description: 'Closing gaps in care for breast cancer screening',
     startDate: '09/01/2025',
     endDate: '09/22/2025',
     dataAsOf: '09/01/2025',
@@ -37,8 +36,7 @@ export const programData = [
   {
     status: Status.Active,
     channel: Channel.InPerson,
-    trackedOutcome:
-      '',
+    trackedOutcome: '',
     title: 'Health Outcomes Survey JIT Outreach',
     startDate: '05/01/2025',
     endDate: '09/22/2025',
@@ -55,8 +53,7 @@ export const programData = [
   {
     status: Status.Complete,
     channel: [Channel.LiveCall, Channel.Online],
-    trackedOutcome:
-      '7-Day ED Visit Follow up rate',
+    trackedOutcome: '7-Day ED Visit Follow up rate',
     title: 'Post ED Visit Follow up with a PCP',
     description:
       'Target high risk members likely to leave the plan to minimize disenrollment',
@@ -77,8 +74,7 @@ export const programData = [
   {
     status: Status.Active,
     channel: Channel.LiveCall,
-    trackedOutcome:
-      'Diabetes A1C testing within 6 months following outreach',
+    trackedOutcome: 'Diabetes A1C testing within 6 months following outreach',
     title: 'Diabetes Care Management',
     description:
       'Improve diabetes outcomes through regular A1C testing and care coordination',
@@ -97,8 +93,7 @@ export const programData = [
   {
     status: Status.Active,
     channel: Channel.SMS,
-    trackedOutcome:
-      'Annual wellness visit completion within 90 days',
+    trackedOutcome: 'Annual wellness visit completion within 90 days',
     title: 'Annual Wellness Visit Outreach',
     description:
       'Encourage preventive care through annual wellness visits for Medicare beneficiaries',
@@ -117,8 +112,7 @@ export const programData = [
   {
     status: Status.Active,
     channel: Channel.Online,
-    trackedOutcome:
-      'Medication adherence improvement within 60 days',
+    trackedOutcome: 'Medication adherence improvement within 60 days',
     title: 'Hypertension Medication Adherence',
     description:
       'Support members with hypertension to maintain consistent medication regimens',
@@ -137,8 +131,7 @@ export const programData = [
   {
     status: Status.Active,
     channel: [Channel.LiveCall, Channel.Online],
-    trackedOutcome:
-      'Colorectal cancer screening completion within 4 months',
+    trackedOutcome: 'Colorectal cancer screening completion within 4 months',
     title: 'Colorectal Cancer Screening Initiative',
     description:
       'Increase screening rates for colorectal cancer among eligible members aged 50-75',
@@ -157,8 +150,7 @@ export const programData = [
   {
     status: Status.Complete,
     channel: Channel.InPerson,
-    trackedOutcome:
-      'Postpartum care visit within 21-56 days after delivery',
+    trackedOutcome: 'Postpartum care visit within 21-56 days after delivery',
     title: 'Maternal Health Follow-up Program',
     description:
       'Ensure new mothers receive timely postpartum care to improve maternal health outcomes',
@@ -177,8 +169,7 @@ export const programData = [
   {
     status: Status.Launched,
     channel: Channel.SMS,
-    trackedOutcome:
-      'Flu vaccination completion within 3 months of outreach',
+    trackedOutcome: 'Flu vaccination completion within 3 months of outreach',
     title: 'Seasonal Influenza Vaccination Campaign',
     description:
       'Increase flu vaccination rates among high-risk members during flu season',

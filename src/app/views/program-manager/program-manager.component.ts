@@ -9,6 +9,7 @@ import { PopoverModule } from 'primeng/popover';
 import { Listbox } from 'primeng/listbox';
 import { MatIcon } from '@angular/material/icon';
 import { cascadeFigmaVariables } from '../../cascade';
+import { ChartComponent } from '../../components/chart/chart.component';
 
 @Component({
   selector: 'app-program-manager',
@@ -21,6 +22,7 @@ import { cascadeFigmaVariables } from '../../cascade';
     PopoverModule,
     Listbox,
     MatIcon,
+    ChartComponent
   ],
   standalone: true,
   templateUrl: './program-manager.component.html',
@@ -38,8 +40,8 @@ export class ProgramManagerComponent {
   programs!: any[];
   selectedPrograms!: any;
   cascade = cascadeFigmaVariables;
-  selectedProgramFilter: string = "";
-  selectedLaunchDateFilter: string = "";
+  selectedProgramFilter: string = '';
+  selectedLaunchDateFilter: string = '';
 
   ngOnInit() {
     let today = new Date();
@@ -58,10 +60,10 @@ export class ProgramManagerComponent {
     this.launchDate = [
       { name: 'Launch Date (Decending)', code: 'NY' },
       { name: 'Launch Date (Ascending)', code: 'RM' },
-        { name: 'End Date (Decending)', code: 'NY' },
+      { name: 'End Date (Decending)', code: 'NY' },
       { name: 'End Date (Ascending)', code: 'RM' },
-       { name: 'Program Name (A - Z)', code: 'NY' },
-       { name: 'Program Name (Z - A)', code: 'NY' },
+      { name: 'Program Name (A - Z)', code: 'NY' },
+      { name: 'Program Name (Z - A)', code: 'NY' },
     ];
     this.programs = [
       { name: 'Preparing', code: 'NY' },
