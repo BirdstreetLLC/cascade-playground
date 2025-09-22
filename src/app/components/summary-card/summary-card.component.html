@@ -18,7 +18,7 @@
       fontSize: cascade.cascadeBrand.fontSizeLarger + 'px',
     }"
     >{{
-      dataType == dataTypeEnum.Number ? data.toLocaleString() : data.toString()
+      (dataType == dataTypeEnum.Number || dataType == dataTypeEnum.Positive) ? data.toLocaleString() : data.toString()
     }}</span
   >
   <button
