@@ -13,11 +13,13 @@ import { programManagerPrototypeImg } from '../../consts/consts';
 import { memberData } from '../../services/memberData';
 import { Button } from 'primeng/button';
 import { MatIcon } from '@angular/material/icon';
+import { ChartComponent } from '../../components/chart/chart.component';
 
 @Component({
   selector: 'app-program',
   imports: [
     GlobalHeaderComponent,
+    ChartComponent,
     HeaderComponent,
     TabMenuModule,
     ButtonModule,

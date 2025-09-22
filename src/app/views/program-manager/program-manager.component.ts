@@ -21,8 +21,6 @@ import { ChartComponent } from '../../components/chart/chart.component';
     DatePickerModule,
     PopoverModule,
     Listbox,
-    MatIcon,
-    ChartComponent
   ],
   standalone: true,
   templateUrl: './program-manager.component.html',

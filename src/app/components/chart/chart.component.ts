@@ -21,32 +21,30 @@ export class ChartComponent {
     );
     const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
 
+    const chartKeys = ['Members in the Outreach', 'Engaged', 'Unengaged', 'Q4'];
+    const dataValues = [540, 325, 702, 620];
+    const backgroundColors = [
+      'rgba(41, 76, 246, 1)',
+      'rgba(151, 115, 238, 1)',
+      'rgba(0, 205, 209, 1)',
+      'rgba(253, 212, 73, 1)',
+      'rgba(253, 0, 82, 1)',
+    ];
+
     this.basicData = {
-      labels: ['Q1', 'Q2', 'Q3', 'Q4'],
-      datasets: [
-        {
-          label: 'Sales',
-          data: [540, 325, 702, 620],
-          backgroundColor: [
-            'rgba(255, 159, 64, 0.2)',
-            'rgba(75, 192, 192, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(153, 102, 255, 0.2)',
-          ],
-          borderColor: [
-            'rgb(255, 159, 64)',
-            'rgb(75, 192, 192)',
-            'rgb(54, 162, 235)',
-            'rgb(153, 102, 255)',
-          ],
-          borderWidth: 1,
-        },
-      ],
+      labels: chartKeys,
+      datasets: chartKeys.map((key, index) => ({
+        label: key,
+        data: [dataValues[index]],
+        backgroundColor: [backgroundColors[index]],
+        borderWidth: 0,
+      })),
     };
 
     this.basicOptions = {
       plugins: {
         legend: {
+          position: 'bottom',
           labels: {
             color: textColor,
           },
@@ -62,6 +60,7 @@ export class ChartComponent {
             color: surfaceBorder,
             drawBorder: false,
           },
+
         },
         x: {
           ticks: {
