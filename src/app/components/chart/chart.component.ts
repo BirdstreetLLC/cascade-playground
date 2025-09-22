@@ -5,12 +5,10 @@ import { ChartModule } from 'primeng/chart';
   selector: 'app-chart',
   imports: [ChartModule],
   templateUrl: './chart.component.html',
-
   styleUrl: './chart.component.css',
 })
 export class ChartComponent {
   basicData: any;
-
   basicOptions: any;
 
   ngOnInit() {

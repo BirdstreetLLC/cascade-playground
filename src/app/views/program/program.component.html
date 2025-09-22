@@ -50,11 +50,12 @@
         <div class="bg-white border border-gray-200 p-4 w-full rounded-sm">
            <app-table *ngIf="activeItem?.label === 'Member List'" [tableData]="memberList" />    
            <div *ngIf="activeItem?.label === 'Overview'">
-             
+             <h2 class="text-xl mb-4 font-regular text-gray-600">Engagement &amp; Impact Overview</h2>
               <app-chart />
            </div>
             <div *ngIf="activeItem?.label === 'Insights'">
-              <img src="https://res.cloudinary.com/dbrkk86kt/image/upload/v1757965282/mpulse/program-manager-prototype/graph-program_otohhp.png" width="100%" />
+              <h2 class="text-xl mb-4 font-regular text-gray-600">Engagement Overview</h2>
+              <app-chart />
            </div>
         </div>
       </div>
