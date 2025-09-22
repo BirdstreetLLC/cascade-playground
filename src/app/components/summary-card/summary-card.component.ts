@@ -7,6 +7,7 @@ export enum DataType {
   Number = 'Number',
   Percentage = 'Percentage',
   Negative = 'Negative',
+  Positive = 'Positive',
 }
 @Component({
   selector: 'app-summary-card',
@@ -37,6 +38,8 @@ export class SummaryCardComponent {
         }
       case DataType.Negative:
         return this.cascade.cascadeAlias.error;
+      case DataType.Positive:
+        return this.cascade.cascadeAlias.tertiary;
       default:
         return this.cascade.cascadeBrand.greyDarkest;
     }

@@ -69,7 +69,7 @@
     <div class="flex-1"></div>
 
     <div *ngIf="dataAsOf" class="flex flex-col gap-2 justify-end items-end">
-      <app-basic-label label="Date As Of" [value]="dataAsOf" />
+      <app-basic-label label="Enrollment data as of" [value]="dataAsOf" />
       <app-pill
         [pillStyle]="pillStyleEnum.Standard"
         [label]="startDate + ' - ' + endDate"
@@ -116,7 +116,7 @@
     <div class="flex-1"></div>
     <app-summary-card
       link="View Members"
-      [dataType]="dataTypeEnum.Percentage"
+      [dataType]="dataTypeEnum.Number"
       *ngIf="didNotEngage"
       label="Unengaged"
       [data]="didNotEngage"
