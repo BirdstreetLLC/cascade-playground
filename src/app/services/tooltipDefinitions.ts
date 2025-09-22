@@ -18,7 +18,7 @@ export const tooltipDefinitions = [
   },
   {
     key: TooltipDefinitions.UnableToReach,
-    value: 'Total number of members could not receive program messages',
+    value: 'Total number of members who did not engage with this program',
   },
   {
     key: TooltipDefinitions.OptOutRate,
