@@ -12,7 +12,7 @@
         
         *ngIf="title"
       >
-       <app-pill *ngIf="status" [label]="status" [pillStyle]="status === statusEnum.Published ? pillStyleEnum.Tertiary : pillStyleEnum.Standard" />
+       <app-pill *ngIf="status" [label]="status" [pillStyle]="status === statusEnum.Active ? pillStyleEnum.Primary : status === statusEnum.Launched ? pillStyleEnum.Tertiary : pillStyleEnum.Standard" />
         <h1 [style]="{
           color: cascade.cascadeBrand.greyDarkest,
           fontSize: cascade.cascadeBrand.fontSizeLarger + 'px',
@@ -77,7 +77,7 @@
     </div>
 
     <div *ngIf="isProgram">
-      <app-program-tiered-menu [isPublished]="status === statusEnum.Published" />
+      <app-program-tiered-menu [isPublished]="status === statusEnum.Complete" />
     </div>
 
     <div *ngIf="definitions">
@@ -106,22 +106,22 @@
     <div class="flex-1"></div>
     <app-summary-card
       link="View Members"
-      [dataType]="dataTypeEnum.Percentage"
-      *ngIf="didNotEngage"
-      label="Did Not Engage"
-      [data]="didNotEngage"
-      (onClick)="onViewMembers()"
-      [tooltip]="getDefinition(tooltipEnum.DidNotEngage)"
-    />
-    <div class="flex-1"></div>
-    <app-summary-card
-      link="View Members"
       [dataType]="dataTypeEnum.Number"
       *ngIf="engaged"
       label="Engaged"
       [data]="engaged"
       (onClick)="onViewMembers()"
       [tooltip]="getDefinition(tooltipEnum.Engaged)"
+    />
+    <div class="flex-1"></div>
+    <app-summary-card
+      link="View Members"
+      [dataType]="dataTypeEnum.Percentage"
+      *ngIf="didNotEngage"
+      label="Unengaged"
+      [data]="didNotEngage"
+      (onClick)="onViewMembers()"
+      [tooltip]="getDefinition(tooltipEnum.DidNotEngage)"
     />
     <div class="flex-1"></div>
     <app-summary-card

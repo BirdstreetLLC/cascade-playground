@@ -13,5 +13,5 @@ export const routes: Routes = [
   { path: 'ask-dpi', component: AskDpiComponent },
   { path: 'program-manager', component: ProgramManagerComponent },
   { path: 'program/:title', component: ProgramComponent },
-  // { path: '', redirectTo: '/range-selector', pathMatch: 'full' },
+  { path: '', redirectTo: '/program-manager', pathMatch: 'full' },
 ];

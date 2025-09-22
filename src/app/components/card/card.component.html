@@ -1,8 +1,8 @@
 <div class="flex flex-col rounded border border-gray-200 bg-white py-4">
   <div class="flex justify-center items-center px-4">
-    <app-pill [label]="status" [pillStyle]="status === statusEnum.Published ? pillStyleEnum.Tertiary : pillStyleEnum.Standard" tooltipPosition="top" [pTooltip]="status === statusEnum.Published ? 'The program has been publised and exceeded the end date' : 'The program is currently active and members are engaging with it'" />
+    <app-pill [label]="status" [pillStyle]="status === statusEnum.Active ? pillStyleEnum.Primary : status === statusEnum.Launched ? pillStyleEnum.Tertiary : pillStyleEnum.Standard" tooltipPosition="top" [pTooltip]="status === statusEnum.Active ? 'The program is currently active and members are engaging with it' : status === statusEnum.Complete ? 'The program has been completed successfully and is available for outcome analysis' : 'The program has been recently launched'" />
     <div class="flex-1"></div>
-    <app-program-tiered-menu [isPublished]="status === statusEnum.Published" />
+    <app-program-tiered-menu [isPublished]="status === statusEnum.Complete" />
   </div>
 
   <div class="flex flex-col mt-1 justify-start w-full items-start px-4">
@@ -65,7 +65,7 @@
     <div class="flex-1"></div>
     <div class="flex flex-col justify-center items-center" tooltipPosition="top" [pTooltip]="getDefinition(tooltipEnum.UnableToReach)">
       <span class="font-bold">{{ unableToReach }}</span>
-      <span class="text-gray-400">Unable to Reach</span>
+      <span class="text-gray-400">Unengaged</span>
     </div>
     <div class="flex-1"></div>
     <div class="flex flex-col justify-center items-center" tooltipPosition="top" [pTooltip]="getDefinition(tooltipEnum.OptOutRate)">
