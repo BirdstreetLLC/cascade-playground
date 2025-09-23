@@ -47,7 +47,9 @@ export class ChartComponent {
     ];
 
     // Add outcome rates as scatter points (no connecting line) if data is provided
-    if (this.outcomeRates && this.outcomeRates.some((rate: any) => rate !== null && rate !== undefined)) {
+    const hasValidOutcomeRates = this.outcomeRates && this.outcomeRates.length > 0 && this.outcomeRates.some((rate: any) => rate !== null && rate !== undefined);
+    
+    if (hasValidOutcomeRates) {
       datasets.push({
         type: 'scatter',
         label: 'Outcome Rate (%)',
@@ -70,38 +72,45 @@ export class ChartComponent {
       datasets: datasets,
     };
 
+    // Configure scales - only add secondary y-axis if outcome rates exist
+    const scales: any = {
+      y: {
+        type: 'linear',
+        display: true,
+        position: 'left',
+        beginAtZero: true,
+        title: {
+          display: true,
+          text: 'Member Count'
+        }
+      }
+    };
+
+    // Only add secondary y-axis if we have outcome rates
+    if (hasValidOutcomeRates) {
+      scales.y1 = {
+        type: 'linear',
+        display: true,
+        position: 'right',
+        beginAtZero: true,
+        title: {
+          display: true,
+          text: 'Outcome Rate (%)'
+        },
+        grid: {
+          drawOnChartArea: false,
+        },
+      };
+    }
+
     this.basicOptions = {
       categoryPercentage: 1,
       barPercentage: 1,
       barThickness: 32,
-      scales: {
-        y: {
-          type: 'linear',
-          display: true,
-          position: 'left',
-          beginAtZero: true,
-          title: {
-            display: true,
-            text: 'Member Count'
-          }
-        },
-        y1: {
-          type: 'linear',
-          display: true,
-          position: 'right',
-          beginAtZero: true,
-          title: {
-            display: true,
-            text: 'Outcome Rate (%)'
-          },
-          grid: {
-            drawOnChartArea: false,
-          },
-        },
-      },
+      scales: scales,
       plugins: {
         legend: {
-          display: true,
+          display: hasValidOutcomeRates, // Only show legend if we have outcome rates
           position: 'bottom'
         },
         datalabels: {
