@@ -67,8 +67,8 @@ export const programData = [
     unengagedOutcomeRate: 1.5,
     memberList: 8547,
     engaged: 921,
-    didNotEngage: 1.2,
-    unableToReach: 2.83,
+    didNotEngage: 7626,
+    unableToReach: 7626,
     optedOut: 1.68,
   },
   {

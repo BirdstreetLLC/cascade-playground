@@ -44,7 +44,9 @@ export class ProgramComponent implements OnInit {
   memberList = memberData?.rows ?? [];
   chartData: any[] = [];
   chartKeys: any[] = [];
+  outcomeRates: any[] = [];
   visible: boolean = false;
+  dialogImageUrl: string = '';
 
   constructor(private route: ActivatedRoute) {}
 
@@ -65,12 +67,28 @@ export class ProgramComponent implements OnInit {
         this.currentProgram = foundProgram;
       }
     }
+
+    // Set dialog image URL based on current program
+    this.setDialogImage();
     this.chartData = [
       this.currentProgram.memberList,
       this.currentProgram.engaged,
-      this.currentProgram.memberList - this.currentProgram.engaged,
+      this.currentProgram.didNotEngage,
     ];
-    this.chartKeys = ['Member List', 'Engaged', 'Unengaged'];
+    this.chartKeys = ['Total Members', 'Engaged', 'Did Not Engage'];
+    
+    // Outcome rates for secondary axis (percentages) - only if they exist
+    const hasOutcomeRates = this.currentProgram.engagedOutcomeRate || this.currentProgram.unengagedOutcomeRate;
+    
+    if (hasOutcomeRates) {
+      this.outcomeRates = [
+        null, // No outcome rate for total members
+        this.currentProgram.engagedOutcomeRate || null,
+        this.currentProgram.unengagedOutcomeRate || null, // Unengaged outcome rate for did not engage
+      ];
+    } else {
+      this.outcomeRates = []; // Empty array when no outcome data exists
+    }
   }
 
   onActiveItemChange(event: MenuItem): void {
@@ -80,6 +98,22 @@ export class ProgramComponent implements OnInit {
   onViewMembers(): void {
     this.activeItem = { label: 'Member List' };
   }
+  setDialogImage() {
+    // Set different images based on the current program
+    // Default image for most programs
+    const defaultImage = 'https://res.cloudinary.com/dbrkk86kt/image/upload/v1758585024/mpulse/program-manager-prototype/tracked-outcome-cleaned_qpktc7.png';
+    
+    // You can specify a different image for this current program
+    // Replace 'YOUR_PROGRAM_TITLE' with the actual title of the program you want to change
+    if (this.title === 'Post ED Visit Follow up with a PCP') {
+      // Replace this URL with your new image URL
+      this.dialogImageUrl = 'https://res.cloudinary.com/dbrkk86kt/image/upload/v1758585024/mpulse/program-manager-prototype/tracked-outcome-cleaned_qpktc7.png';
+    } else {
+      // Use default image for all other programs
+      this.dialogImageUrl = defaultImage;
+    }
+  }
+
   showDialog() {
     this.visible = true;
     console.log('clicked');
