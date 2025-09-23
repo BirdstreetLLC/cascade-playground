@@ -44,6 +44,7 @@ export class ProgramComponent implements OnInit {
   memberList = memberData?.rows ?? [];
   chartData: any[] = [];
   chartKeys: any[] = [];
+  outcomeRates: any[] = [];
   visible: boolean = false;
 
   constructor(private route: ActivatedRoute) {}
@@ -68,9 +69,16 @@ export class ProgramComponent implements OnInit {
     this.chartData = [
       this.currentProgram.memberList,
       this.currentProgram.engaged,
-      this.currentProgram.memberList - this.currentProgram.engaged,
+      this.currentProgram.didNotEngage,
     ];
-    this.chartKeys = ['Member List', 'Engaged', 'Unengaged'];
+    this.chartKeys = ['Total Members', 'Engaged', 'Did Not Engage'];
+    
+    // Outcome rates for secondary axis (percentages)
+    this.outcomeRates = [
+      null, // No outcome rate for total members
+      this.currentProgram.engagedOutcomeRate || 0,
+      this.currentProgram.unengagedOutcomeRate || 0, // Unengaged outcome rate for did not engage
+    ];
   }
 
   onActiveItemChange(event: MenuItem): void {

@@ -17,6 +17,7 @@
     [unableToReach]="currentProgram.unableToReach"
     [optedOut]="currentProgram.optedOut"
     [didNotEngage]="currentProgram.didNotEngage"
+    [hideOptOutCard]="true"
     programManagerUrl="Program Manager"
     dpiDataOverviewUrl="Data Overview"
     [status]="currentProgram.status"
@@ -52,11 +53,11 @@
            <app-table *ngIf="activeItem?.label === 'Member List'" [tableData]="memberList" />    
            <div *ngIf="activeItem?.label === 'Overview'">
              <h2 class="text-xl mb-4 font-regular text-gray-600">Engagement &amp; Impact Overview</h2>
-              <app-chart [data]="chartData" [keys]="chartKeys" />
+              <app-chart [data]="chartData" [keys]="chartKeys" [outcomeRates]="outcomeRates" />
            </div>
             <div *ngIf="activeItem?.label === 'Insights'">
               <h2 class="text-xl mb-4 font-regular text-gray-600">Engagement Overview</h2>
-              <app-chart [data]="chartData" [keys]="chartKeys" />
+              <app-chart [data]="chartData" [keys]="chartKeys" [outcomeRates]="outcomeRates" />
            </div>
         </div>
       </div>
@@ -64,6 +65,6 @@
   </div>
 </div>
 
-<p-dialog header="Add An Element" [modal]="true" [(visible)]="visible" [style]="{ width: '1280px' }">
+<p-dialog header="Program Outcome" [modal]="true" [(visible)]="visible" [style]="{ width: '1280px' }">
     <img src="https://res.cloudinary.com/dbrkk86kt/image/upload/v1758585024/mpulse/program-manager-prototype/tracked-outcome-cleaned_qpktc7.png" />
 </p-dialog>

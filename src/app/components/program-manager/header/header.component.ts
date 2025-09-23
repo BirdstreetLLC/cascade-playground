@@ -56,6 +56,7 @@ export class HeaderComponent {
   @Input() onViewMembers: any = () => {};
   @Input() engagedOutcomeRate: number = 0;
   @Input() unengagedOutcomeRate: number = 0;
+  @Input() hideOptOutCard: boolean = false;
   // @Input() onTrackedOutcome: any = () => {};
   @Output() public readonly onTrackedOutcome = new EventEmitter<void>();
 
