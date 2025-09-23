@@ -101,7 +101,7 @@ export class ProgramComponent implements OnInit {
   setDialogImage() {
     // Set different images based on the current program
     // Default image for most programs
-    const defaultImage = 'https://res.cloudinary.com/dbrkk86kt/image/upload/v1758585024/mpulse/program-manager-prototype/tracked-outcome-cleaned_qpktc7.png';
+    const defaultImage = 'https://res.cloudinary.com/dbrkk86kt/image/upload/v1758637366/mpulse/program-manager-prototype/breast-cancer-screening_2_sdp3b9.png';
     
     // You can specify a different image for this current program
     // Replace 'YOUR_PROGRAM_TITLE' with the actual title of the program you want to change
