@@ -1,7 +1,13 @@
 <div
   [style.backgroundColor]="backgroundColor"
   [style.color]="textColor"
-  class="rounded-full px-2 py-[2px] text-[12px] text-white"
+  class="rounded-full px-2 py-[2px] text-[12px] text-white flex justify-center items-center"
 >
-  {{ label }}
+  <div *ngIf="icon">
+    <mat-icon class="mr-2 mt-1" [style]="{ fontSize: '16px', height: '16px', width: '16px' }">{{icon}}</mat-icon>
+  </div>
+  <div>
+    {{ label }}
+  </div>
+
 </div>

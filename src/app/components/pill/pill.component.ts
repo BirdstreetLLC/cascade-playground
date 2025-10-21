@@ -1,20 +1,24 @@
 import { Component, Input } from '@angular/core';
 import { cascadeFigmaVariables } from '../../cascade';
+import { NgIf } from '@angular/common';
+import { MatIcon } from '@angular/material/icon';
 
 export enum PillStyles {
   Primary = 'Primary',
   Tertiary = 'Tertiary',
   Standard = 'Standard',
 }
+
 @Component({
   selector: 'app-pill',
-  imports: [],
+  imports: [NgIf, MatIcon],
   templateUrl: './pill.component.html',
   styleUrl: './pill.component.css',
 })
 export class PillComponent {
   @Input() label: string = '';
   @Input() pillStyle: PillStyles = PillStyles.Primary;
+  @Input() icon: string = '';
   cascade = cascadeFigmaVariables;
   pillStyleEnum = PillStyles;
   get backgroundColor(): string {

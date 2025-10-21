@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { cascadeFigmaVariables } from '../../cascade';
 import { NgIf } from '@angular/common';
 import { MatIcon } from '@angular/material/icon';
+import { LabelStyleEnum } from '../../consts/consts';
 
 @Component({
   selector: 'app-basic-label',
@@ -14,6 +15,7 @@ export class BasicLabelComponent {
   @Input() label: string = '';
   @Input() value: string = '';
   @Input() isClickable: boolean = false;
+  @Input() labelStyle: LabelStyleEnum = LabelStyleEnum.BASIC
   /**
    * Emits an event when the label is clicked.
    */

@@ -24,6 +24,14 @@ export class ProgramTieredMenuComponent {
             ? this.onUnpublishProgram()
             : this.onPublishProgram(),
       },
+      {
+        label: "Freeze Snapshot",
+        icon: 'publish',
+        command: () =>
+          this.isPublished
+            ? this.onUnpublishProgram()
+            : this.onPublishProgram(),
+      },
     ];
   }
 

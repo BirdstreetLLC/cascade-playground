@@ -75,6 +75,11 @@
         [pillStyle]="pillStyleEnum.Standard"
         [label]="startDate + ' - ' + endDate"
       />
+      <app-pill
+        [pillStyle]="pillStyleEnum.Tertiary"
+        [label]="'Snapshot Frozen: ' + startDate + ' - ' + endDate"
+        icon="alarm_pause"
+      />
     </div>
 
     <div *ngIf="isProgram">
